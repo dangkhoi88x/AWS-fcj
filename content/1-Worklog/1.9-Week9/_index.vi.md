@@ -1,59 +1,50 @@
 ---
-title: "Worklog Tuần 9"
-date: 2025-11-13
+title: "Nhật ký Tuần 9"
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 9
 
-### Mục tiêu tuần 9:
+- Hoàn thành **báo cáo tổng kết toàn bộ hành trình AWS Cloud Journey**.
+- Xây dựng và trình bày **kiến trúc hệ thống hoàn chỉnh** dựa trên các dịch vụ AWS đã học.
+- Ôn tập và củng cố toàn bộ kiến thức từ Week 1 → Week 8.
+- Chuẩn bị báo cáo, tài liệu và nội dung thuyết trình cuối kỳ.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+---
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tổng quan Nhiệm vụ Tuần
 
+| Ngày | Hoạt động                                                                                                                                                                  | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo                                      |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------------- | ------------------------------------------------------- |
+| 1    | - Tổng hợp kiến thức từ Week 1–8 <br> + Xem lại toàn bộ các dịch vụ AWS đã học <br> + Đánh giá mức độ hiểu biết về Compute, Storage, Networking, Security                  | 03/11/2025   | 03/11/2025    | -                                                       |
+| 2    | - Hoàn thiện **bản kiến trúc hệ thống (Architecture Diagram)** <br> + Vẽ sơ đồ VPC tổng thể <br> + Thể hiện Compute, RDS, S3, Load Balancer, Auto Scaling, IAM, Monitoring | 04/11/2025   | 04/11/2025    | <https://aws.amazon.com/architecture/icons/>            |
+| 3    | - Viết **báo cáo tổng kết** theo 5 trụ cột Well-Architected <br> + Security <br> + Reliability <br> + Performance <br> + Cost Optimization <br> + Operational Excellence   | 05/11/2025   | 05/11/2025    | <https://aws.amazon.com/architecture/well-architected/> |
+| 4    | - Ôn tập các chủ đề quan trọng <br> + VPC nâng cao, VPN, Direct Connect <br> + Load Balancing, Auto Scaling <br> + S3 Security, CloudFront, IAM                            | 06/11/2025   | 06/11/2025    | -                                                       |
+| 5    | - Chuẩn bị tài liệu thuyết trình cuối kỳ <br> + Slide giới thiệu kiến trúc <br> + Nội dung demo (nếu có)                                                                   | 07/11/2025   | 07/11/2025    | -                                                       |
+| 6    | - Tổng kết cuối tuần <br> + Hoàn thiện Worklog, đẩy lên GitHub/Hugo site <br> + Kiểm tra lại toàn bộ nội dung trước khi nộp                                                | 08/11/2025   | 08/11/2025    | -                                                       |
 
-### Kết quả đạt được tuần 9:
+---
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Thành tựu Tuần 9
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Hoàn thành **bản kiến trúc hệ thống hoàn chỉnh**, bao gồm:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+  - VPC với public/private subnets
+  - EC2 + ALB + Auto Scaling
+  - RDS + S3 + CloudFront
+  - IAM roles/policies + Security Groups
+  - CloudWatch + CloudTrail
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Viết và hoàn thiện **báo cáo tổng kết AWS Cloud Journey**, thể hiện đầy đủ:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+  - Kiến thức đã học
+  - Dịch vụ đã triển khai
+  - Giải thích kiến trúc và lý do lựa chọn
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Củng cố kiến thức về **Security, Networking, Compute, Storage, Serverless, Monitoring**.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+- Chuẩn bị đầy đủ **slide thuyết trình**, hình ảnh, sơ đồ kiến trúc, và demo nhỏ.
 
-
+- Sẵn sàng cho buổi **báo cáo Final Presentation** của chương trình.

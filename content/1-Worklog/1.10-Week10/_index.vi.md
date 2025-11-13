@@ -1,59 +1,54 @@
 ---
-title: "Worklog Tuần 10"
-date: 2025-11-13
+title: "Nhật ký Tuần 10"
 weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 10
 
-### Mục tiêu tuần 10:
+- Hoàn thiện **Proposal dự án** theo yêu cầu chương trình.
+- Nghiên cứu kiến thức kiến trúc đám mây để có thể **vẽ sơ đồ AWS Architecture** chuẩn theo best practices.
+- Chuẩn bị nội dung cấu trúc, luồng dữ liệu và các dịch vụ AWS sẽ xuất hiện trong kiến trúc cuối cùng.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+---
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tổng quan Nhiệm vụ Tuần
 
+| Ngày | Hoạt động                                                                                                                                                             | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo                           |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------------- | -------------------------------------------- |
+| 1    | - Bắt đầu viết **Project Proposal** <br> + Viết phần Executive Summary <br> + Xác định Problem Statement và mục tiêu dự án                                            | 10/11/2025   | 10/11/2025    | -                                            |
+| 2    | - Hoàn thiện Proposal phần Solution Overview <br> + Liệt kê dịch vụ AWS cần dùng <br> + Định nghĩa luồng dữ liệu chính của hệ thống                                   | 11/11/2025   | 11/11/2025    | <https://aws.amazon.com/architecture/>       |
+| 3    | - Học kiến thức để vẽ **AWS Architecture Diagram** <br> + Tìm hiểu kiến trúc chuẩn 3-tier, Serverless, Event-driven <br> + Làm quen biểu tượng AWS Architecture Icons | 12/11/2025   | 12/11/2025    | <https://aws.amazon.com/architecture/icons/> |
+| 4    | - Thực hành phác thảo sơ đồ kiến trúc <br> + Xây dựng VPC, Subnets <br> + Thêm ALB, EC2, RDS, S3, IAM vào sơ đồ <br> + Xác định các điểm kết nối và bảo mật           | 13/11/2025   | 13/11/2025    | -                                            |
+| 5    | - Cập nhật Proposal dựa trên kiến trúc đã vẽ <br> + Thêm Architecture Diagram <br> + Viết Technical Implementation                                                    | 14/11/2025   | 14/11/2025    | -                                            |
+| 6    | - Tổng kết tuần 10 <br> + Review Proposal hoàn chỉnh <br> + Kiểm tra lại toàn bộ kiến trúc trước khi nộp                                                              | 15/11/2025   | 15/11/2025    | -                                            |
 
-### Kết quả đạt được tuần 10:
+---
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Thành tựu Tuần 10
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Hoàn thành bản **Project Proposal** với đầy đủ:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+  - Executive Summary
+  - Problem Statement
+  - Proposed Architecture
+  - Expected Outcomes
+  - Technical Implementation
+  - Risk Assessment
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Nắm vững kiến thức để vẽ sơ đồ kiến trúc AWS:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+  - Biểu tượng AWS Architecture Icons
+  - Cách trình bày VPC, Subnets, Routing
+  - Thiết lập Compute, Storage, Database, Networking trong sơ đồ
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Vẽ được **bản phác thảo sơ đồ kiến trúc ban đầu**, bao gồm:
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+  - VPC (Public & Private)
+  - ALB + EC2 Auto Scaling
+  - RDS Database
+  - S3 Storage Layer
+  - IAM + Security Groups + Flow Logs
 
-
+- Chuẩn bị đầy đủ nội dung để bước sang giai đoạn trình bày cuối cùng trong các tuần tiếp theo.
