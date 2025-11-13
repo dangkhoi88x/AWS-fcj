@@ -1,59 +1,51 @@
 ---
-title: "Worklog Tuần 7"
-date: "`r Sys.Date()`"
-weight: 1
+title: "Nhật ký Tuần 7"
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 7
 
-### Mục tiêu tuần 7:
+- Hiểu và áp dụng các phương pháp **bảo mật dữ liệu và hệ thống** trong AWS.
+- Quản lý, cấu hình và tối ưu **Amazon VPC (Virtual Private Cloud)** cho hệ thống mạng riêng.
+- Học cách **sao lưu, phục hồi và triển khai kế hoạch khôi phục thảm họa (Disaster Recovery)** với các công cụ AWS.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+---
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tổng quan Nhiệm vụ Tuần
 
+| Ngày | Hoạt động                                                                                                                                                                                                                                                                                     | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo                 |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------------- | ---------------------------------- |
+| 1    | - Tìm hiểu về **AWS Security & Encryption** <br> + Làm quen với **AWS KMS (Key Management Service)** để mã hóa dữ liệu <br> + Khám phá **CloudHSM** cho bảo mật khóa phần cứng (Hardware Security Module) <br> + Tìm hiểu **AWS Shield** và **WAF** để bảo vệ ứng dụng web khỏi tấn công DDoS | 20/10/2025   | 20/10/2025    | <https://aws.amazon.com/security/> |
+| 2    | - Thực hành **KMS và Shield/WAF** <br> + Tạo và quản lý **Customer Managed Keys (CMK)** trong KMS <br> + Thiết lập **AWS WAF rules** để chặn truy cập độc hại <br> + Kiểm thử bảo mật ứng dụng bằng **Shield Standard**                                                                       | 21/10/2025   | 21/10/2025    | <https://docs.aws.amazon.com/kms/> |
+| 3    | - Nghiên cứu **Amazon VPC cơ bản** <br> + Tạo **VPC, Subnet, Route Table, và Internet Gateway** <br> + Thiết lập **Security Group** và **Network ACL** để kiểm soát truy cập <br> + Kết nối VPC với các dịch vụ khác như EC2 và RDS                                                           | 22/10/2025   | 22/10/2025    | <https://aws.amazon.com/vpc/>      |
+| 4    | - Tìm hiểu nâng cao về **VPC Networking** <br> + Thiết lập **VPN Connection** giữa on-premise và VPC <br> + Giới thiệu **AWS Direct Connect** để kết nối vật lý <br> + Mô phỏng mô hình phân vùng mạng an toàn (Private/Public Subnets)                                                       | 23/10/2025   | 23/10/2025    | <https://docs.aws.amazon.com/vpc/> |
+| 5    | - Tìm hiểu về **Disaster Recovery & Backup** <br> + Sử dụng **AWS Backup** để sao lưu tài nguyên tự động <br> + Cấu hình **RDS Read Replicas** để tăng khả năng chịu lỗi <br> + Thực hành **Cross-Region Failover** cho kế hoạch DR                                                           | 24/10/2025   | 24/10/2025    | <https://aws.amazon.com/backup/>   |
+| 6    | - Ôn tập và tổng hợp kiến thức tuần 7 <br> + Kiểm thử lại các thiết lập **VPC**, **Backup**, và **WAF** <br> + Viết tài liệu đánh giá bảo mật hệ thống <br> + Tổng hợp bài học về bảo mật, mạng, và phục hồi thảm họa                                                                         | 25/10/2025   | 25/10/2025    | -                                  |
 
-### Kết quả đạt được tuần 7:
+---
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Thành tựu Tuần 7
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Nắm vững **bảo mật dữ liệu và mã hóa trong AWS**:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+  - Thực hành tạo và quản lý **KMS keys** để bảo vệ dữ liệu.
+  - Hiểu cơ chế hoạt động của **CloudHSM** trong quản lý khóa phần cứng.
+  - Cấu hình **AWS Shield** và **WAF** để bảo vệ ứng dụng khỏi tấn công DDoS và truy cập độc hại.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Làm chủ **mạng riêng ảo Amazon VPC**:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+  - Tạo và cấu hình **VPC**, **subnets**, **route tables**, **Internet Gateway**, và **NAT Gateway**.
+  - Áp dụng **Security Groups** và **Network ACLs** để kiểm soát truy cập hiệu quả.
+  - Thiết lập **VPN Connection** và hiểu khái niệm **Direct Connect** cho kết nối bảo mật cao.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Hiểu rõ quy trình **Disaster Recovery (DR)** và sao lưu dữ liệu:
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+  - Sử dụng **AWS Backup** để quản lý sao lưu định kỳ.
+  - Cấu hình **RDS Read Replicas** để đảm bảo tính sẵn sàng dữ liệu.
+  - Thực hiện **Cross-Region Failover** để đảm bảo khôi phục nhanh sau thảm họa.
 
-
+- Tăng cường khả năng thiết kế hệ thống an toàn, đáng tin cậy và có khả năng phục hồi cao.
+  - Biết cách kết hợp giữa **Security**, **Networking**, và **Resilience** trong kiến trúc AWS.
+  - Chuẩn bị kiến thức cho tuần tiếp theo về **Automation, Infrastructure as Code (IaC), và DevOps Practices**.

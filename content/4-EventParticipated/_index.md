@@ -1,6 +1,6 @@
 ---
 title: "Events Participated"
-date: "`r Sys.Date()`"
+date: 2025-11-13
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "

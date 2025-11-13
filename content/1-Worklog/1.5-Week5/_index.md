@@ -1,57 +1,54 @@
 ---
 title: "Week 5 Worklog"
-date: "`r Sys.Date()`"
-weight: 1
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Week 5 Goals
 
-### Week 5 Objectives:
+- Learn how to deploy and manage **containers** on AWS using **ECS**, **EKS**, and **Docker**.
+- Understand the fundamentals and advantages of **Serverless Architecture**.
+- Build and design **Serverless applications** integrating **Lambda**, **API Gateway**, **S3**, and **DynamoDB**.
+- Explore AWS **database services** including **RDS**, **Aurora**, **DynamoDB**, **Redshift**, and **ElastiCache**.
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Weekly Tasks Overview
 
+| Day | Activity                                                                                                                                                                                                                          | Start Date | End Date   | Reference                                         |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ------------------------------------------------- |
+| 1   | - Studied **Containers on AWS** <br> + Learned differences between **ECS** and **EKS** <br> + Deployed a sample Docker container on **ECS (Fargate)** <br> + Explored container orchestration concepts                            | 10/06/2025 | 10/06/2025 | <https://aws.amazon.com/containers/>              |
+| 2   | - Practiced **EKS (Elastic Kubernetes Service)** basics <br> + Created an EKS cluster and deployed a simple app <br> + Connected local Docker images to ECR (Elastic Container Registry) <br> + Monitored cluster via AWS Console | 10/07/2025 | 10/07/2025 | <https://aws.amazon.com/eks/>                     |
+| 3   | - Explored **Serverless Overview** <br> + Learned the concepts of event-driven computing <br> + Created and tested basic **AWS Lambda** functions <br> + Integrated Lambda with **API Gateway** to expose endpoints               | 10/08/2025 | 10/08/2025 | <https://aws.amazon.com/lambda/>                  |
+| 4   | - Designed **Serverless Architectures** <br> + Connected **Lambda** with **DynamoDB** and **S3** <br> + Created a simple data pipeline using **Step Functions** <br> + Tested an end-to-end serverless workflow                   | 10/09/2025 | 10/09/2025 | <https://aws.amazon.com/architecture/serverless/> |
+| 5   | - Studied **Databases in AWS** <br> + Compared relational vs. NoSQL solutions <br> + Created test databases in **RDS** and **DynamoDB** <br> + Explored analytics with **Redshift** and caching using **ElastiCache**             | 10/10/2025 | 10/10/2025 | <https://aws.amazon.com/databases/>               |
+| 6   | - Reviewed all concepts learned during the week <br> + Deployed a small demo project combining **Lambda**, **API Gateway**, **DynamoDB**, and **S3** <br> + Documented lessons learned and best practices                         | 10/11/2025 | 10/11/2025 | -                                                 |
 
-### Week 5 Achievements:
+---
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Week 5 Achievements
 
-* Successfully created and configured an AWS Free Tier account.
+- Gained hands-on experience with **Containers on AWS**:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+  - Deployed and managed Docker containers using **ECS (Fargate)** and **EKS**.
+  - Understood container orchestration, scaling, and image management via **ECR**.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Developed foundational understanding of **Serverless Architecture**:
 
-* Used AWS CLI to perform basic operations such as:
+  - Built and executed Lambda functions for event-driven workloads.
+  - Integrated **Lambda** with **API Gateway** to create RESTful endpoints.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+- Designed and implemented a complete **Serverless Application**:
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+  - Connected **Lambda** with **DynamoDB** and **S3** to automate data processing.
+  - Used **Step Functions** for workflow orchestration and automation.
+
+- Strengthened knowledge of **AWS Database Services**:
+
+  - Worked with **RDS** for relational databases and **DynamoDB** for NoSQL workloads.
+  - Understood **Aurora’s** scalability and **Redshift’s** analytics capabilities.
+  - Tested caching with **ElastiCache** to improve performance.
+
+- Applied **DevOps mindset** by combining containers, serverless computing, and databases into a unified deployment workflow.
+- Prepared for next week’s focus on **Monitoring, CI/CD, and Infrastructure as Code (IaC)** using AWS Developer Tools.

@@ -1,58 +1,56 @@
 ---
-title: "Worklog Tuần 6"
-date: "`r Sys.Date()`"
-weight: 1
+title: "Nhật ký Tuần 6"
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 6
 
-### Mục tiêu tuần 6:
+- Tìm hiểu và thực hành các dịch vụ **Data & Analytics** của AWS.
+- Làm quen với các dịch vụ **Machine Learning (ML)** như **SageMaker** và **Rekognition**.
+- Nâng cao kỹ năng **giám sát, kiểm tra, và tối ưu hiệu suất hệ thống** bằng CloudWatch, CloudTrail, và Trusted Advisor.
+- Tìm hiểu về **quản lý danh tính nâng cao** trong AWS bao gồm IAM Roles, Federated Access, và SSO.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+---
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tổng quan Nhiệm vụ Tuần
 
+| Ngày | Hoạt động                                                                                                                                                                                                                                                  | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo                         |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------------- | ------------------------------------------ |
+| 1    | - Nghiên cứu **Data & Analytics Services** <br> + Làm quen với **Amazon Athena** để truy vấn dữ liệu trực tiếp từ S3 <br> + Tìm hiểu **AWS Glue** cho ETL (Extract – Transform – Load) <br> + Giới thiệu về **Amazon EMR** và xử lý dữ liệu lớn (Big Data) | 13/10/2025   | 13/10/2025    | <https://aws.amazon.com/athena/>           |
+| 2    | - Thực hành với **AWS Glue & Kinesis** <br> + Tạo Glue crawler để tự động thu thập metadata <br> + Thiết lập **Kinesis Data Stream** để xử lý dữ liệu theo thời gian thực <br> + Kết hợp Glue và Athena để phân tích dữ liệu động                          | 14/10/2025   | 14/10/2025    | <https://aws.amazon.com/glue/>             |
+| 3    | - Bắt đầu học về **Machine Learning trên AWS** <br> + Làm quen với **Amazon SageMaker** <br> + Tạo và huấn luyện mô hình đơn giản trên dataset mẫu <br> + Khám phá dịch vụ **Amazon Rekognition** để nhận diện hình ảnh                                    | 15/10/2025   | 15/10/2025    | <https://aws.amazon.com/sagemaker/>        |
+| 4    | - Tiếp tục phần **Machine Learning** <br> + Triển khai mô hình SageMaker lên endpoint inference <br> + Kiểm thử và đánh giá độ chính xác mô hình <br> + Tìm hiểu các dịch vụ ML khác như **Comprehend**, **Translate**, và **Textract**                    | 16/10/2025   | 16/10/2025    | <https://aws.amazon.com/machine-learning/> |
+| 5    | - Thực hành **Monitoring, Audit & Performance** <br> + Cấu hình **Amazon CloudWatch** để thu thập metrics <br> + Kích hoạt **AWS CloudTrail** để theo dõi hoạt động API <br> + Sử dụng **Trusted Advisor** để phát hiện rủi ro và tối ưu chi phí           | 17/10/2025   | 17/10/2025    | <https://aws.amazon.com/cloudwatch/>       |
+| 6    | - Học về **Advanced Identity in AWS** <br> + Tạo và quản lý **IAM Roles** nâng cao <br> + Tìm hiểu **Federated Access** để đăng nhập qua tài khoản ngoài <br> + Cấu hình **AWS SSO (Single Sign-On)** và thử nghiệm truy cập đa tài khoản                  | 18/10/2025   | 18/10/2025    | <https://aws.amazon.com/iam/>              |
 
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Thành tựu Tuần 6
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+- Nắm vững kiến thức về **AWS Data & Analytics**:
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+  - Hiểu quy trình phân tích dữ liệu sử dụng **Athena**, **Glue**, **EMR**, và **Kinesis**.
+  - Thực hành truy vấn dữ liệu S3 bằng **Athena** và xây dựng ETL pipeline cơ bản bằng **Glue**.
+  - Tạo pipeline xử lý dữ liệu thời gian thực với **Kinesis Data Stream**.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+- Tiếp cận và thực hành **Machine Learning trên AWS**:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+  - Huấn luyện và triển khai mô hình mẫu bằng **SageMaker**.
+  - Sử dụng **Rekognition** để nhận diện khuôn mặt và đối tượng trong hình ảnh.
+  - Làm quen với các dịch vụ ML khác: **Comprehend**, **Translate**, **Textract**.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+- Thành thạo kỹ năng **giám sát và kiểm tra hệ thống**:
 
+  - Theo dõi metric và log bằng **CloudWatch**.
+  - Ghi nhận và kiểm tra hoạt động API qua **CloudTrail**.
+  - Phân tích báo cáo và khuyến nghị từ **Trusted Advisor** để tối ưu hiệu suất.
 
+- Tăng cường hiểu biết về **bảo mật và quản lý danh tính nâng cao**:
+
+  - Tạo **IAM Roles** và áp dụng nguyên tắc least privilege.
+  - Tìm hiểu **Federated Access** cho phép đăng nhập bằng tài khoản tổ chức.
+  - Cấu hình **AWS SSO** để truy cập nhiều tài khoản AWS một cách an toàn và thuận tiện.
+
+- Hoàn thiện kỹ năng tổng hợp giữa **Data, Machine Learning, Monitoring**, và **Security**, chuẩn bị cho tuần tiếp theo về **Automation & Infrastructure as Code (IaC)**.
