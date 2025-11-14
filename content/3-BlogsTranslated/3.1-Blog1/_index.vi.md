@@ -3,124 +3,120 @@ title: "Blog 1"
 date: 2025-11-13
 weight: 1
 chapter: false
-pre: " <b> 3.1. </b> "
+pre: " <b> 3.2. </b> "
 ---
+
 {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-# Bắt đầu với healthcare data lakes: Sử dụng microservices
+# Truyền tải video hiệu quả và AI thị giác tại biên với Realtek, Plumerai và Amazon Kinesis Video Streams
 
-Các data lake có thể giúp các bệnh viện và cơ sở y tế chuyển dữ liệu thành những thông tin chi tiết về doanh nghiệp và duy trì hoạt động kinh doanh liên tục, đồng thời bảo vệ quyền riêng tư của bệnh nhân. **Data lake** là một kho lưu trữ tập trung, được quản lý và bảo mật để lưu trữ tất cả dữ liệu của bạn, cả ở dạng ban đầu và đã xử lý để phân tích. data lake cho phép bạn chia nhỏ các kho chứa dữ liệu và kết hợp các loại phân tích khác nhau để có được thông tin chi tiết và đưa ra các quyết định kinh doanh tốt hơn.
+Trí tuệ nhân tạo (AI) tại biên đang trở nên phổ biến trong các thiết bị video thông minh. Ví dụ, các camera Nhà thông minh và chuông cửa video đã cách mạng hóa việc giám sát tại nhà. Từ những công cụ ghi hình đơn giản và xem từ xa, các thiết bị này đã tiến hóa thành những người quan sát thông minh. Với sự tích hợp AI, các camera ngày nay có thể chủ động phân tích cảnh, cảnh báo người dùng về các sự kiện chuyển động, nhận diện khuôn mặt quen thuộc, phát hiện việc giao hàng gói hàng và điều chỉnh hành vi ghi hình một cách linh hoạt. Các camera giám sát doanh nghiệp là một ví dụ khác. Những camera này có độ phân giải vượt trội, khả năng tính toán nâng cao và có thể hỗ trợ các mô hình AI phức tạp hơn. Những khả năng nâng cao này mang lại khả năng phát hiện sắc nét hơn ở khoảng cách xa hơn.
 
-Bài đăng trên blog này là một phần của loạt bài lớn hơn về việc bắt đầu cài đặt data lake dành cho lĩnh vực y tế. Trong bài đăng blog cuối cùng của tôi trong loạt bài, *“Bắt đầu với data lake dành cho lĩnh vực y tế: Đào sâu vào Amazon Cognito”*, tôi tập trung vào các chi tiết cụ thể của việc sử dụng Amazon Cognito và Attribute Based Access Control (ABAC) để xác thực và ủy quyền người dùng trong giải pháp data lake y tế. Trong blog này, tôi trình bày chi tiết cách giải pháp đã phát triển ở cấp độ cơ bản, bao gồm các quyết định thiết kế mà tôi đã đưa ra và các tính năng bổ sung được sử dụng. Bạn có thể truy cập các code samples cho giải pháp tại Git repo này để tham khảo.
-
----
-
-## Hướng dẫn kiến trúc
-
-Thay đổi chính kể từ lần trình bày cuối cùng của kiến trúc tổng thể là việc tách dịch vụ đơn lẻ thành một tập hợp các dịch vụ nhỏ để cải thiện khả năng bảo trì và tính linh hoạt. Việc tích hợp một lượng lớn dữ liệu y tế khác nhau thường yêu cầu các trình kết nối chuyên biệt cho từng định dạng; bằng cách giữ chúng được đóng gói riêng biệt với microservices, chúng ta có thể thêm, xóa và sửa đổi từng trình kết nối mà không ảnh hưởng đến những kết nối khác. Các microservices được kết nối rời thông qua tin nhắn publish/subscribe tập trung trong cái mà tôi gọi là “pub/sub hub”.
-
-Giải pháp này đại diện cho những gì tôi sẽ coi là một lần lặp nước rút hợp lý khác từ last post của tôi. Phạm vi vẫn được giới hạn trong việc nhập và phân tích cú pháp đơn giản của các **HL7v2 messages** được định dạng theo **Quy tắc mã hóa 7 (ER7)** thông qua giao diện REST.
-
-**Kiến trúc giải pháp bây giờ như sau:**
-
-> *Hình 1. Kiến trúc tổng thể; những ô màu thể hiện những dịch vụ riêng biệt.*
+Như đã minh họa, khách hàng đòi hỏi các hệ thống giám sát thông minh có thể xử lý dữ liệu cục bộ trong khi vẫn duy trì quyền riêng tư và giảm chi phí băng thông. Để đáp ứng những nhu cầu này, nhóm AWS Internet of Things (AWS IoT) đã phát triển một giải pháp camera thông minh cùng với các đối tác AWS, kết hợp Amazon Kinesis Video Streams, vi điều khiển Ameba Pro2 tiết kiệm năng lượng của Realtek và các mô hình học máy hiệu quả từ Plumerai. Bài viết này cung cấp hướng dẫn cho việc tải video kích hoạt theo sự kiện kết hợp với xử lý thuật toán phát hiện con người tại biên.
 
 ---
 
-Mặc dù thuật ngữ *microservices* có một số sự mơ hồ cố hữu, một số đặc điểm là chung:  
-- Chúng nhỏ, tự chủ, kết hợp rời rạc  
-- Có thể tái sử dụng, giao tiếp thông qua giao diện được xác định rõ  
-- Chuyên biệt để giải quyết một việc  
-- Thường được triển khai trong **event-driven architecture**
+## Kiến trúc giải pháp
 
-Khi xác định vị trí tạo ranh giới giữa các microservices, cần cân nhắc:  
-- **Nội tại**: công nghệ được sử dụng, hiệu suất, độ tin cậy, khả năng mở rộng  
-- **Bên ngoài**: chức năng phụ thuộc, tần suất thay đổi, khả năng tái sử dụng  
-- **Con người**: quyền sở hữu nhóm, quản lý *cognitive load*
+Hình dưới đây minh họa kiến trúc giải pháp mà bài viết này sử dụng:
 
----
-
-## Lựa chọn công nghệ và phạm vi giao tiếp
-
-| Phạm vi giao tiếp                        | Các công nghệ / mô hình cần xem xét                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Trong một microservice                   | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Giữa các microservices trong một dịch vụ | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Giữa các dịch vụ                         | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+- Bắt đầu từ camera, firmware của thiết bị đã tích hợp **Realtek SDK** để truy cập các mô-đun camera thông qua các API được xác định.
+- Các đoạn video được truyền đến **các mô hình học máy của Plumerai** để thực hiện phát hiện đối tượng.
+- Ứng dụng mẫu thêm kết quả phát hiện dưới dạng **lớp phủ bounding box** trên các đoạn video gốc. Ứng dụng này liên tục tải các đoạn video lên đám mây thông qua **Kinesis Video Streams Producer SDK**.  
+  _(Bạn cũng có thể thiết lập để chỉ tải lên các đoạn video 20 giây khi có phát hiện.)_
+- **Producer SDK** sử dụng **PutMedia API** với kết nối HTTPS lâu dài để tải liên tục các mảnh MKV.
+- Dữ liệu media được thu nhận và lưu trữ bền vững để phân tích về sau.
+- Một **ứng dụng front-end** có thể phát lại video trực tiếp hoặc video đã ghi thông qua **HLS hoặc DASH**.
+- Giải pháp cung cấp dữ liệu video và âm thanh vào **Large Language Models (LLMs)** để khai thác insight từ Agentic AI.  
+  _(Tìm kiếm video ngữ nghĩa sẽ được trình bày trong bài tiếp theo.)_
 
 ---
 
-## The pub/sub hub
+## Điểm nổi bật của tích hợp
 
-Việc sử dụng kiến trúc **hub-and-spoke** (hay message broker) hoạt động tốt với một số lượng nhỏ các microservices liên quan chặt chẽ.  
-- Mỗi microservice chỉ phụ thuộc vào *hub*  
-- Kết nối giữa các microservice chỉ giới hạn ở nội dung của message được xuất  
-- Giảm số lượng synchronous calls vì pub/sub là *push* không đồng bộ một chiều
+### **Amazon Kinesis Video Streams**
 
-Nhược điểm: cần **phối hợp và giám sát** để tránh microservice xử lý nhầm message.
+Kinesis Video Streams mang lại nhiều lợi ích cho camera IP, robot và ô tô:
 
----
+- **Kiến trúc được quản lý hoàn toàn** → đội kỹ thuật chỉ cần tập trung vào phát triển tính năng.
+- **AWS SDK mã nguồn mở**, tránh phụ thuộc nền tảng.
+- **Mô hình trả phí theo sử dụng linh hoạt**, không tốn chi phí cho đến khi camera hoạt động thật.
 
-## Core microservice
+### **Plumerai**
 
-Cung cấp dữ liệu nền tảng và lớp truyền thông, gồm:  
-- **Amazon S3** bucket cho dữ liệu  
-- **Amazon DynamoDB** cho danh mục dữ liệu  
-- **AWS Lambda** để ghi message vào data lake và danh mục  
-- **Amazon SNS** topic làm *hub*  
-- **Amazon S3** bucket cho artifacts như mã Lambda
+Plumerai chuyên về AI nhúng và tối ưu mô hình để chạy trên phần cứng nhỏ, hiệu năng thấp:
 
-> Chỉ cho phép truy cập ghi gián tiếp vào data lake qua hàm Lambda → đảm bảo nhất quán.
+- Tối ưu hoá CPU Arm Cortex-M ở mức **assembly**, tận dụng lệnh DSP.
+- **Neural Architecture Search (NAS)** chọn kiến trúc AI tối ưu cho Realtek NPU.
+- Tận dụng **hardware accelerators** (scaler, format converter) của Realtek.
+- Tích hợp tốt với **RTOS** và khung truyền thông Realtek.
+- Khởi động nhanh, mô hình huấn luyện trên **30 triệu video & ảnh**.
 
----
+**Hiệu suất thực tế:**
 
-## Front door microservice
-
-- Cung cấp API Gateway để tương tác REST bên ngoài  
-- Xác thực & ủy quyền dựa trên **OIDC** thông qua **Amazon Cognito**  
-- Cơ chế *deduplication* tự quản lý bằng DynamoDB thay vì SNS FIFO vì:
-  1. SNS deduplication TTL chỉ 5 phút
-  2. SNS FIFO yêu cầu SQS FIFO
-  3. Chủ động báo cho sender biết message là bản sao
+- Độ chính xác cao, bộ nhớ thấp.
+- Góc nhìn rộng **180°**.
+- Phát hiện người trong phạm vi **20m+**.
+- Theo dõi **20 người cùng lúc**.
+- Hoạt động tốt cả ban ngày và đêm tối.
 
 ---
 
-## Staging ER7 microservice
+## Realtek Ameba Pro2
 
-- Lambda “trigger” đăng ký với pub/sub hub, lọc message theo attribute  
-- Step Functions Express Workflow để chuyển ER7 → JSON  
-- Hai Lambda:
-  1. Sửa format ER7 (newline, carriage return)
-  2. Parsing logic  
-- Kết quả hoặc lỗi được đẩy lại vào pub/sub hub
+Realtek Ameba Pro2 bao gồm:
+
+- **Integrated Video Encoder (IVE)**
+- **Image Signal Processor (ISP)**
+- **Video Offload Engine (VOE)**
+- **Neural Processing Unit (NPU)**
+- **Parallel Processing Unit (PPU)**
+
+Khả năng chính:
+
+- Tốn rất ít CPU.
+- Phản hồi gần thời gian thực.
+- Xử lý video ngay cả khi đang khởi động.
+- Truyền tới SD Card và Cloud qua WiFi/Ethernet.
+- Hỗ trợ mạnh mẽ inference AI tại biên.
 
 ---
 
-## Tính năng mới trong giải pháp
+## Hướng dẫn từng bước
 
-### 1. AWS CloudFormation cross-stack references
-Ví dụ *outputs* trong core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+### **Điều kiện tiên quyết**
+
+Bạn cần:
+
+- Tài khoản AWS có quyền:
+  - Đăng nhập AWS Console
+  - API Kinesis Video Streams  
+    (_GetDataEndpoint, DescribeStream, PutMedia_)
+  - Tạo EC2 instance để build SDK
+- Stream có tên `kvs-plumerai-realtek-stream`
+- Realtek Ameba Pro2 MCU
+- Kinh nghiệm Linux basic
+- SDK Realtek & thư viện Plumerai
+- Kết nối internet
+
+---
+
+## Thiết lập môi trường xây dựng
+
+### **Tạo EC2 Instance**
+
+1. Vào AWS Console → EC2.
+2. Launch instance:
+   - **Tên:** `KVS_AmebaPlumerAI_poc`
+   - **OS:** Ubuntu 22.04 LTS
+   - **Loại máy:** t3.large
+   - **Key pair:** `kvs-plumerai-realtek-keypair`
+   - **Storage:** 100 GiB
+3. Mở port SSH.
+4. SSH vào EC2:
+
+```bash
+ssh -o ServerAliveInterval=60 -i kvs-plumerai-realtek-keypair.pem ubuntu@54.xxx.yyy.zzz
+```

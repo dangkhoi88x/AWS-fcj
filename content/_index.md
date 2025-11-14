@@ -5,7 +5,6 @@ weight: 1
 chapter: false
 ---
 
-    
 # Internship Report
 
 {{% notice warning %}}
@@ -13,13 +12,36 @@ chapter: false
 {{% /notice %}}
 
 ### Student Information:
-&emsp; **Full Name:** Nguyen Van A
 
-&emsp; **Phone Number:** 0989888999 
+&emsp; **Full Name:** Nguyen Dang Khoi
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Phone Number:** 0939093231
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **Email:** dangkhoi88x@gmail.com
+
+&emsp; **University:** Saigon University
+
+&emsp; **Major:** Information Technology
+
+&emsp; **Class:** AWS082025
+
+&emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
+
+&emsp; **Internship Position:** FCJ Cloud Intern
+
+&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+
+![Your profile picture](/images/avatar.png)
+
+### Student Information:
+
+&emsp; **Full Name:** Nguyen Dang Khoi
+
+&emsp; **Phone Number:** 0939093231
+
+&emsp; **Email:** dangkhoi88x@gmail.com
+
+&emsp; **University:** Saigon University
 
 &emsp; **Major:** Information Technology
 

@@ -1,5 +1,5 @@
 ---
-title: "Proposal Document"
+title: "Proposal"
 date: 2025-09-10
 weight: 2
 chapter: false
@@ -8,205 +8,193 @@ pre: " <b> 2. </b> "
 
 # Digital Transformation for Mini-market on AWS Cloud
 
-## E-commerce .NET 3-tier Solution with Repository and Unit of Work Pattern
+## .NET E-commerce 3-tier Solution Applying Repository and Unit of Work Pattern
 
 ### 1. Executive Summary
 
-This proposal presents an end-to-end solution for **“Digital Transformation for Mini-market on AWS Cloud.”** Traditional mini-markets are currently facing three major challenges:  
-(1) Manual inventory management (Excel/notebooks) leading to revenue loss and resource waste;  
-(2) Complete dependence on offline sales, missing the rapidly growing e-commerce market and losing competitiveness; and  
-(3) Slow operational workflow (such as manually checking prices), resulting in poor customer experience.
+This proposal presents an end-to-end solution for "Digital Transformation for Mini-market on the AWS Cloud." Traditional mini-markets are currently facing three major challenges: (1) Manual inventory management (using Excel/notebooks) leading to revenue loss and resource waste; (2) 100% reliance on offline sales, missing the fast-growing e-commerce market and losing competitiveness; and (3) Slow operational processes (such as manual price lookup), resulting in poor customer experience.
 
-Our solution is to build a fully integrated e-commerce and operational management platform. For software architecture, we adopt a **.NET 3-tier architecture** (ASP.NET Core MVC, EF Core) with **Repository Pattern** and **Unit of Work Pattern**. For infrastructure architecture, we design the system based on the **AWS Well-Architected Framework**, deployed on **AWS Elastic Beanstalk** (for .NET backend), **Amazon RDS for SQL Server** (database), and **Amazon S3** (static assets). The system’s performance is optimized using **CloudFront** and **ElastiCache**, and security is ensured by **AWS WAF**, **VPC**, and **NAT Gateway**. Deployment is fully automated through a **CI/CD pipeline** integrated with GitHub.
+The proposed solution is to build a comprehensive e-commerce and operational management platform. For software architecture, the team will use a .NET 3-layer architecture (ASP.NET Core MVC, EF Core) combined with the Repository Pattern and Unit of Work Pattern. For infrastructure architecture, the system is designed following the AWS Well-Architected Framework, running on AWS Elastic Beanstalk (for the .NET backend), Amazon RDS for SQL Server (for the database), and Amazon S3 (for static assets). The system is performance-optimized using CloudFront and ElastiCache, and secured using WAF, VPC, and NAT Gateway. The deployment process is fully automated using a CI/CD pipeline integrated with GitHub.
 
-The business benefits are immediate: automated inventory management (reducing losses) and opening a new online revenue channel. Infrastructure costs in the first 12 months are close to zero thanks to AWS Free Tier (e.g., RDS Express Edition, EC2 t3.micro). Long-term operational expenses (after Free Tier) are also practical—**only about $138.06/month** for the entire architecture. Because the initial investment is minimal while solving major operational pain points, the ROI is extremely high and nearly instantaneous.
+The business benefits are immediate, including automated inventory management (reducing losses) and opening a new online revenue channel. In terms of investment, infrastructure cost in the first 12 months is nearly zero thanks to AWS Free Tier (e.g., RDS Express Edition, EC2 t3.micro). The long-term operational cost (after Free Tier) is also very reasonable, estimated at only 138.06 USD/month for the entire system. With minimal initial investment and the ability to directly address revenue leakage issues, the ROI is very high and nearly instantaneous.
 
-The project is planned over **11 weeks**, divided into 4 phases:  
-(1) Foundation & Architecture,  
-(2) Core Feature Development,  
-(3) AWS Integration & CI/CD,  
-(4) Finalization & Deployment.
-
-Expected results will be measured with specific success metrics:
-
-- 90% reduction in inventory errors
-- 50% faster checkout process
-- 20% revenue from online channel in the first 6 months
-
-This solution not only addresses the current problems but also provides a scalable foundation for future data-driven decisions.
-
----
+The project is proposed to be implemented within 11 weeks, divided into four main phases: (1) Foundation & Architecture, (2) Core Feature Development, (3) AWS Integration & CI/CD, and (4) Finalization & Deployment. Expected outcomes are measured using specific success metrics: reducing inventory errors by 90%, reducing checkout time by 50%, and achieving 20% online revenue within the first 6 months. This solution not only addresses immediate problems but also provides a scalable platform for future data-driven decision-making.
 
 ### 2. Problem Statement
 
 _Current Situation_  
-Small and medium-sized retail shops—especially traditional mini-markets in Vietnam—still rely on outdated manual workflows. As the market becomes increasingly digitized, the lack of technology adoption creates several issues that directly impact their ability to survive and grow.
+Small and medium retail businesses, especially traditional mini-market models in Vietnam, are operating based on outdated manual processes. As the market becomes increasingly digital, the lack of technology adoption has created multiple issues that directly impact their ability to survive and grow.
 
 _Key Problems_
 
-- **Manual Inventory Management → Inaccuracy & resource waste:**  
-  Most mini-markets manage thousands of SKUs using notebooks or Excel. Manual entry for stock-in/out is highly error-prone (wrong SKUs, wrong quantities), leading to mismatches between recorded and actual inventory. Staff spend hours daily counting stock instead of serving customers. This leads to financial losses of **5–10% of inventory value** each month.
+- **Manual inventory management leads to inaccurate data and resource waste:**  
+  Most mini-markets currently manage thousands of SKUs using notebooks or Excel files. Stock-in/out and end-of-day inventory checks rely entirely on manual counting and data entry. This easily leads to data errors due to frequent mistakes in product codes or quantities, causing large discrepancies between “recorded” and “actual” stock. Manual checking also requires significant labor, as employees spend hours daily counting, reconciling, and correcting reports instead of focusing on sales or customer service. Ultimately, this results in financial losses, as inaccurate data prevents owners from monitoring expired goods, damaged items, or theft, typically causing 5–10% inventory loss monthly.
 
-- **Dependency on offline sales → Missed e-commerce market:**  
-  Traditional mini-markets rely heavily on walk-in customers, limited by location and local customer base. They miss out on the rapidly growing online market, especially younger customers accustomed to online shopping. Without online sales (delivery, 24/7 ordering), they cannot compete with Circle K, 7-Eleven, Grab, or Shopee.
+- **Dependence on offline sales, missing the E-commerce market:**  
+  Most mini-markets in Vietnam depend heavily on walk-in customers. They are limited by geography (serving only nearby areas) and a small group of familiar customers. Operating offline only means missing out on the growing e-commerce customer base, especially younger generations used to online shopping. They cannot compete with the convenience of 24/7 ordering or home delivery offered by major convenience store chains like Circle K or 7-Eleven and delivery apps like Grab or Shopee, resulting in customer loss over time.
 
-- **Slow operations → Poor customer experience:**  
-  Price checks, promotions, and product information are done manually by staff, leading to slow service and long waiting times. This creates frustration, reduces service capacity during peak hours, and damages perceived professionalism.
-
----
+- **Operational inefficiency and poor customer experience:**  
+  Checkout and information lookup processes in traditional mini-markets are usually very slow. When customers ask for product prices, details, or promotions, employees (especially new ones) must search manually, wasting time. Making customers wait long causes frustration and appears unprofessional. Employees spend too much time on simple, error-prone tasks (e.g., misreading handwritten prices), reducing the number of customers served during peak hours.
 
 ### 3. Solution Architecture
 
-The architecture is designed to solve the problems above by combining **.NET 3-tier architecture** with AWS fully managed services. It follows the **AWS Well-Architected Framework** to ensure security, performance, resiliency, and cost optimization.
+The architecture is designed to address the problems above by combining a .NET 3-tier software architecture with AWS managed cloud services. This architecture follows the principles of the AWS Well-Architected Framework, ensuring security, high performance, fault tolerance, and cost optimization.
 
-![Mini-market Architecture](/images/2-Proposal/project_architecture_3.1.png)
+![Mini-market Architecture](/images/2-Proposal/IMG_2934.JPG)
 
 _AWS Services Used_
 
-- **AWS Elastic Beanstalk:**  
-  PaaS chosen to deploy the .NET 3-tier application (Presentation + Application layers). Beanstalk automates infrastructure management and creates an Auto Scaling Group for scalability and cost efficiency.
+- _AWS Elastic Beanstalk_: A Platform as a Service (PaaS) chosen to deploy the .NET 3-tier application (including the WebShop Presentation Layer and Application Services Layer). Beanstalk automates 100% of infrastructure management, including automatically creating an Auto Scaling Group (ASG) to ensure scalability and cost efficiency.
 
-- **Amazon RDS (SQL Server):**  
-  A managed relational database service hosting the Persistence Layer. SQL Server is selected for compatibility with the existing .NET system. RDS handles daily backups, patching, and failover automatically. The DB is placed in a Private Subnet for security. We start with **SQL Server Express Edition (Free Tier)** to minimize cost.
+- _Amazon RDS (SQL Server)_: A Managed Relational Database Service that hosts the Persistence Layer. SQL Server is chosen because the .NET application has been developed and optimized for SQL Server. Using RDS for SQL Server allows migrating the application to AWS without modifying the Data Layer code. RDS automates daily backups, patching, and failover. For security, RDS is placed in a Private Subnet, preventing direct Internet access and allowing only the Beanstalk application to connect. For cost optimization, SQL Server Express Edition on RDS (Free Tier eligible) is used during the early phase.
 
-- **Amazon S3:**  
-  Stores static assets (product images, CSS, JS). Highly scalable and cost-efficient.
+- _Amazon S3_: Object storage used for static assets such as product images, CSS files, and JavaScript files. S3 provides extremely low cost and unlimited scalability.
 
-- **Amazon CloudFront:**  
-  A global CDN caching static files from S3 for faster page load and reduced load on Beanstalk.
+- _Amazon CloudFront_: A Content Delivery Network (CDN). CloudFront caches static files from S3 at global edge locations, significantly improving page load speed and reducing load on Beanstalk, allowing the .NET application to focus on business logic.
 
-- **AWS WAF & Route 53:**  
-  WAF protects against common attacks (SQL injection, XSS). Route 53 provides DNS routing.
+- _Amazon WAF & Route 53_: WAF (Web Application Firewall) is integrated with CloudFront to block common attacks (SQL injection, XSS). Route 53 provides domain and DNS routing.
 
-- **Amazon ElastiCache (Redis):**  
-  In-memory caching for frequently accessed data, reducing load on RDS.
+- _Amazon ElastiCache (Redis)_: An in-memory data store. It reduces load on RDS for repeated queries (e.g., homepage product list). The .NET application will cache hot data in Redis to improve response times. Like RDS, ElastiCache is placed in a Private Subnet for security.
 
-- **NAT Gateway:**  
-  Allows instances in private subnets to securely access the internet (for patching, updates).
+- _NAT Gateway_: Provides secure outgoing Internet access for private resources (such as Elastic Beanstalk), allowing servers to download security patches without being exposed to the Internet.
 
-- **AWS CodePipeline / CodeBuild:**  
-  Automates building, testing, and deploying the application to Elastic Beanstalk.
+- _AWS CodePipeline/CodeBuild_: CI/CD services that integrate with GitHub to automate: (1) CodeBuild compiles the .NET code, (2) CodePipeline deploys new versions to Elastic Beanstalk.
 
 _Data Flow_
 
-- Users → Route 53 → CloudFront → (Static assets) S3
-- Dynamic requests → CloudFront → ALB → Elastic Beanstalk
-- Application → ElastiCache → RDS
-- Patch/update traffic → Beanstalk → NAT Gateway → Internet
-- CI/CD flow → GitHub push → CodePipeline → CodeBuild → Elastic Beanstalk
-
----
+- [1]-[2] Users access the domain (via Route 53) and are routed to CloudFront. WAF filters the request.
+- [3] (Static Flow) If static files (images, CSS), CloudFront serves directly from Amazon S3.
+- [4]-[6] (Dynamic Flow) If dynamic requests, CloudFront forwards traffic through the Internet Gateway to the Application Load Balancer, then to Elastic Beanstalk.
+- [7]-[8] The .NET application checks ElastiCache first; if not available, it queries Amazon RDS.
+- [9]-[10] When Elastic Beanstalk requires Internet access (e.g., downloading patches), it communicates through NAT Gateway to the Internet Gateway.
+- [11]-[14] (CI/CD Flow) When developers push code to GitHub, CodePipeline and CodeBuild automatically build and deploy the new version to Elastic Beanstalk.
 
 ### 4. Technical Implementation
 
-_Project Phases_
+_Phases of Implementation_  
+The project is divided into 4 main phases over 11 weeks to ensure progress and quality:
 
-1. **Build Technical Foundation** (Weeks 1–4)  
-   Finalize data models, set up .NET 3-tier architecture, create GitHub repository, and study AWS services.
+1. _Building technical foundation_: Focus on setting up the technical foundation, finalizing data models for core entities, establishing the .NET 3-tier solution structure (Domain, Application, Persistence, WebShop), initializing the GitHub repository, and learning AWS services. (Week 1–4)
 
-2. **Develop Core Features** (Weeks 5–7)  
-   Build Persistence Layer (Repositories, UoW), Application Layer (Services), and WebShop (Login, Cart, Payment). Begin unit testing.
+2. _Developing core features_: Complete the Persistence Layer (Repositories, Unit of Work) and Application Layer (Services) for core tasks such as product, user, and order management. Meanwhile, the WebShop Layer (Controllers, Views) will be built for login, cart, checkout flows, and Unit Tests for Services will begin. (Week 5–7)
 
-3. **Integrate AWS Services** (Weeks 8–10)  
-   Integrate S3 for product images, ElastiCache for caching, and build a complete CI/CD pipeline to deploy to Staging.
+3. _Integrating AWS services_: Integrate Amazon S3 for product images and ElastiCache (Redis) for caching. The team will complete the CI/CD pipeline for automatic deployment to the Staging environment on Elastic Beanstalk and conduct Integration Testing. (Week 8–10)
 
-4. **Finalize & Deploy** (Week 11)  
-   Configure CloudFront, WAF, Route 53. Deploy v1.0 to Production on Elastic Beanstalk and enable CloudWatch monitoring.
+4. _Finalization and deployment_: Configure security services such as CloudFront, WAF, and Route 53. Deploy version 1.0 to Elastic Beanstalk, conduct final UAT, and set up monitoring using CloudWatch. (Week 11)
 
 _Technical Requirements_
 
-- Backend: ASP.NET Core MVC 9.0
-- ORM: Entity Framework Core
-- Database: SQL Server 2022 (local) & Amazon RDS SQL Server
-- Frontend: Bootstrap 5, jQuery
-- AWS: Beanstalk, RDS, VPC, S3, CloudFront, WAF, ElastiCache, NAT Gateway
-- Tools: Visual Studio 2022, Docker Desktop
+- _Backend_: ASP.NET Core MVC 9.0
+- _ORM_: Entity Framework Core
+- _Database_: MS SQL Server 2022 (Local) and Amazon RDS for SQL Server (Cloud)
+- _Frontend_: Bootstrap 5, jQuery, Bootstrap Icons
+- _Cloud Platform (AWS)_: Elastic Beanstalk, RDS, S3, CloudFront, WAF, Route 53, ElastiCache, VPC, NAT Gateway, CodePipeline, CodeBuild
+- _Source Control_: Git
+- _Tools_: Visual Studio 2022, Docker Desktop
 
 _Development Methodology_
 
-- Agile (Scrum-like)
-- Kanban board for tracking tasks
-- Code reviews via GitHub merge requests
-- Continuous integration and automated deployments
+Agile (Scrum-like) is applied for flexibility and progress assurance, aligned with the four planned phases. All tasks (features, bugs) are tracked via a Kanban board. All new code must be reviewed via GitHub merge requests before merging into the main branch to maintain code quality.
 
 _Testing Strategy_
 
-1. **Unit Testing** – Application Layer
-2. **Integration Testing** – Staging environment
-3. **User Acceptance Testing** – Production environment
+Three levels of testing will be executed:
 
-_CI/CD Strategy_
+- Unit Testing (100% focused on Application Layer, using mocked repositories)
+- Integration Testing (on Staging with real RDS and EF Core)
+- User Acceptance Testing (on Production UI for flows like Register, Login, Checkout)
 
-- GitHub push → triggers AWS CodePipeline
-- CodeBuild builds, tests, packages .NET app
-- CodePipeline deploys to Elastic Beanstalk (Staging → Production)
+_Deployment Plan_
 
----
+A fully automated CI/CD pipeline is used. When code is pushed to GitHub, AWS CodePipeline triggers CodeBuild to compile the project, run Unit Tests, and package a .zip file. If successful, CodePipeline deploys the new version to Staging on Elastic Beanstalk.
 
-### 5. Timeline & Milestones
+### 5. Roadmap & Milestones
 
-- **Phase 1 (Weeks 1–4):** Architecture foundation, repository setup, AWS environment (VPC, subnets)
-- **Phase 2 (Weeks 5–7):** Core features (Auth, Products, Cart, Checkout), unit tests
-- **Phase 3 (Weeks 8–10):** AWS integrations (S3, ElastiCache), CI/CD pipeline
-- **Phase 4 (Week 11):** Deployment, UAT, monitoring setup
+The project is planned over 11 weeks, divided into 4 phases:
 
----
+Phase 1 (Week 1–4): Technical foundation (data models, .NET architecture, GitHub, AWS VPC/Subnets).  
+Milestone: Architecture & repositories completed.
 
-### 6. Budget Estimation
+Phase 2 (Week 5–7): Core features (Products, Orders, Auth, Cart, Checkout, Unit Tests).  
+Milestone: All core flows working locally.
 
-Using AWS Pricing Calculator (link provided).  
-Estimated monthly cost: **$138.06** (post Free Tier).  
-Includes:
+Phase 3 (Week 8–10): AWS integration (S3, Redis, CI/CD, Staging deployment).  
+Milestone: Pipeline working, Staging deployment stable.
 
-- EC2 t3a.small: $19.15
-- ALB: $18.69
-- NAT Gateway: $46.02
-- RDS db.t3.micro: $25.86
-- ElastiCache t4g.micro: $17.52
-- WAF: $7.20
-- CloudFront: $2.43
-- Others (S3, Route 53, CodeBuild)
+Phase 4 (Week 11): Security configuration, Production deployment, UAT, CloudWatch monitoring.  
+Milestone: Version 1.0 live on Production.
 
-**First-year cost is nearly zero** because Free Tier covers most services except NAT Gateway and WAF.
+### 6. Budget Estimate
 
-ROI is extremely high due to low cost and immediate operational benefits.
+View full estimate:  
+[AWS Pricing Calculator](https://calculator.aws/#/estimate?id=d9984dcf32da018859c676f29d2d4d255a2933ca)  
+Or download the [budget file](/attachments/pricing.pdf).
 
----
+_Infrastructure Cost_
+
+The AWS Pricing Calculator estimates monthly operational cost at 138.06 USD with 0.00 USD upfront. The cost optimization strategy focuses on maximizing AWS Free Tier and managed services.
+
+Breakdown:
+
+- EC2 t3a.small (via Beanstalk): $19.15/month
+- ALB: $18.69/month
+- VPC (NAT Gateway): $46.02/month
+- RDS SQL Server Express (db.t3.micro): $25.86/month
+- ElastiCache (t4g.micro): $17.52/month
+- WAF: $7.20/month
+- CloudFront, S3, Route 53, CodeBuild: small remaining cost
+
+Most core services fall under Free Tier during the first 12 months, reducing real costs significantly (mainly NAT Gateway + WAF remain).
+
+ROI is extremely high because the solution directly reduces inventory loss and opens new revenue channels.
 
 ### 7. Risk Assessment
 
-1. **Technical: System Overload**
+Three types of risks were identified: Technical, Business, and Operational.
 
-   - Mitigation: ElastiCache, Auto Scaling, CloudFront
-   - Backup: CloudWatch Alarms, vertical scaling for RDS
+1. Technical: System Overload (Performance Bottleneck)
 
-2. **Business: Low User Adoption**
+   - Impact: **High** | Probability: **Medium**
+   - Mitigation: Redis caching, Auto Scaling, CloudFront caching
+   - Contingency: CloudWatch alarms, immediate RDS vertical scaling
 
-   - Mitigation: Simple UI, early shop-owner feedback
-   - Backup: Additional Sprint for UX improvements
+2. Business: Low User Adoption
 
-3. **Operational: Data Loss / Breach**
-   - Mitigation: Daily RDS backups, Private Subnets, WAF, secret management
-   - Backup: RDS PITR recovery
+   - Impact: **High** | Probability: **Medium**
+   - Mitigation: Simple UI, early feedback, training materials
+   - Contingency: Extra Sprint to adjust features based on feedback
 
----
+3. Operational: Data Loss / Breach
+   - Impact: **Critical** | Probability: **Low**
+   - Mitigation: Automated RDS backups, Private Subnet isolation, WAF protection, secured environment variables
+   - Contingency: Point-in-Time Recovery (PITR)
 
 ### 8. Expected Outcomes
 
-Expected business results:
+Business metrics:
 
 - 90% reduction in inventory errors
-- 50% faster checkout
-- 20% revenue from online channel within 6 months
+- 50% faster checkout time
+- 20% online revenue within 6 months
 
-Expected technical results:
+Technical metrics:
 
 - 99.9% uptime
-- <2 seconds average page load time (CloudFront + caching)
+- <2s page load time (CloudFront + Redis)
 - Stable CI/CD deployment frequency
 
-Value over time:
+Short-term (0–6 months):
 
-- **Short-term:** Better UX and faster operations
-- **Medium-term:** Online customer acquisition, business analytics
-- **Long-term:** Data-driven decisions and scalable multi-shop expansion
+- Immediate UX improvements
+- Inventory automation
+- Reduced operational errors
+
+Medium-term (6–18 months):
+
+- Market expansion
+- Collection of valuable business data
+
+Long-term:
+
+- Full data-driven decision-making
+- Easy multi-store scaling via Elastic Beanstalk + RDS

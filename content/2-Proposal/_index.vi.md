@@ -35,7 +35,7 @@ _Một số vấn đề chính_
 
 Kiến trúc được thiết kế để giải quyết các vấn đề đã nêu, bằng cách kết hợp kiến trúc phần mềm .NET 3-lớp (Tier-3) với các dịch vụ đám mây được quản lý (Managed Services) của AWS. Kiến trúc này tuân thủ các nguyên tắc của AWS Well-Architected Framework, đảm bảo tính bảo mật, hiệu năng cao, khả năng phục hồi lỗi và tối ưu chi phí.
 
-![Mini-market Architecture](/images/2-Proposal/project_architecture_3.1.png)
+![Mini-market Architecture](/images/2-Proposal/IMG_2934.JPG)
 
 _Dịch vụ AWS sử dụng_
 
@@ -118,8 +118,7 @@ Phase 4 (Tuần 11): Giai đoạn cuối cùng này tập trung vào hoàn thi�
 
 ### 6. Ước tính ngân sách
 
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=d9984dcf32da018859c676f29d2d4d255a2933ca)  
-Hoặc tải [tệp ước tính ngân sách](/attachments/pricing.pdf).
+Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=d9984dcf32da018859c676f29d2d4d255a2933ca)
 
 _Chi phí hạ tầng_
 
