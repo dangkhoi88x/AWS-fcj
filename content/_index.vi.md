@@ -7,13 +7,13 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
+&emsp; **Họ và tên:** Nguyễn Đăng Khôi
 
-&emsp; **Số điện thoại:** 0989888999
+&emsp; **Số điện thoại:** 0939093231
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** dangkhoi88x@gmail.com
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
+&emsp; **Trường:** Đại học Sài Gòn
 
 &emsp; **Ngành:** Công nghệ thông tin
 
@@ -23,10 +23,94 @@ chapter: false
 
 &emsp; **Vị trí thực tập:** FCJ Cloud Intern
 
-&emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
+&emsp; **Thời gian thực tập:** Từ ngày 29/09/2025 đến ngày 22/11/2025
 
 ![Ảnh đại diện của bạn](/images/avatar.png)
 
+# Báo cáo thực tập
+### Thông tin sinh viên:
+&emsp; **Họ và tên:** Lâm Vĩnh Cường
+
+&emsp; **Số điện thoại:** 0903563176
+
+&emsp; **Email:** cuonglvse182626@fpt.edu.vn
+
+&emsp; **Trường:** Đại học FPT
+
+&emsp; **Ngành:** Công nghệ thông tin
+
+&emsp; **Lớp:** AWS082025
+
+&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
+
+&emsp; **Vị trí thực tập:** FCJ Cloud Intern
+
+&emsp; **Thời gian thực tập:** Từ ngày 29/09/2025 đến ngày 22/11/2025
+
+![Ảnh đại diện của bạn](/images/avatar.png)
+# Báo cáo thực tập
+### Thông tin sinh viên:
+&emsp; **Họ và tên:** Dương Tuấn Kiệt
+
+&emsp; **Số điện thoại:** 0793812792
+
+&emsp; **Email:** kietdtse183938@fpt.edu.vn
+
+&emsp; **Trường:** Đại học FPT
+
+&emsp; **Ngành:** Công nghệ thông tin
+
+&emsp; **Lớp:** AWS082025
+
+&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
+
+&emsp; **Vị trí thực tập:** FCJ Cloud Intern
+
+&emsp; **Thời gian thực tập:** Từ ngày 29/09/2025 đến ngày 22/11/2025
+
+![Ảnh đại diện của bạn](/images/avatar.png)
+# Báo cáo thực tập
+### Thông tin sinh viên:
+&emsp; **Họ và tên:** Hồ Chí Kiệt
+
+&emsp; **Số điện thoại:** 0818227828
+
+&emsp; **Email:** kiethcse182293@fpt.edu.vn
+
+&emsp; **Trường:** Đại học FPT
+
+&emsp; **Ngành:** Công nghệ thông tin
+
+&emsp; **Lớp:** AWS082025
+
+&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
+
+&emsp; **Vị trí thực tập:** FCJ Cloud Intern
+
+&emsp; **Thời gian thực tập:** Từ ngày 29/09/2025 đến ngày 22/11/2025
+
+![Ảnh đại diện của bạn](/images/avatar.png)
+# Báo cáo thực tập
+### Thông tin sinh viên:
+&emsp; **Họ và tên:** Nguyễn Hoàng Gia Huy
+
+&emsp; **Số điện thoại:** 0902566797
+
+&emsp; **Email:** huynhgse182631@fpt.edu.vn
+
+&emsp; **Trường:** Đại học FPT
+
+&emsp; **Ngành:** Công nghệ thông tin
+
+&emsp; **Lớp:** AWS082025
+
+&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
+
+&emsp; **Vị trí thực tập:** FCJ Cloud Intern
+
+&emsp; **Thời gian thực tập:** Từ ngày 29/09/2025 đến ngày 22/11/2025
+
+![Ảnh đại diện của bạn](/images/avatar.png)
 
 
 ### Nội dung báo cáo

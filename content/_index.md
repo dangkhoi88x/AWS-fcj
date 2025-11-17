@@ -29,19 +29,19 @@ chapter: false
 
 &emsp; **Internship Position:** FCJ Cloud Intern
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Internship Duration:** From 29/09/2025 to 22/11/2025
 
 ![Your profile picture](/images/avatar.png)
 
 ### Student Information:
 
-&emsp; **Full Name:** Nguyen Dang Khoi
+&emsp; **Full Name:** Lam Vinh Cuong
 
-&emsp; **Phone Number:** 0939093231
+&emsp; **Phone Number:** 0903563176
 
-&emsp; **Email:** dangkhoi88x@gmail.com
+&emsp; **Email:** cuonglvse182626@fpt.edu.vn
 
-&emsp; **University:** Saigon University
+&emsp; **University:** FPT University
 
 &emsp; **Major:** Information Technology
 
@@ -51,10 +51,72 @@ chapter: false
 
 &emsp; **Internship Position:** FCJ Cloud Intern
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Internship Duration:** From 29/09/2025 to 22/11/2025
 
 ![Your profile picture](/images/avatar.png)
 
+### Student Information:
+
+&emsp; **Full Name:** Duong Tuan Kiet
+
+&emsp; **Phone Number:** 0793812792
+
+&emsp; **Email:** kietdtse183938@fpt.edu.vn
+
+&emsp; **University:** FPT University
+
+&emsp; **Major:** Information Technology
+
+&emsp; **Class:** AWS082025
+
+&emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
+
+&emsp; **Internship Position:** FCJ Cloud Intern
+
+&emsp; **Internship Duration:** From 29/09/2025 to 22/11/2025
+
+![Your profile picture](/images/avatar.png)
+### Student Information:
+
+&emsp; **Full Name:** Ho Chi Kiet
+
+&emsp; **Phone Number:** 0818227828
+
+&emsp; **Email:** -kiethcse182293@fpt.edu.vn
+
+&emsp; **University:** FPT University
+
+&emsp; **Major:** Information Technology
+
+&emsp; **Class:** AWS082025
+
+&emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
+
+&emsp; **Internship Position:** FCJ Cloud Intern
+
+&emsp; **Internship Duration:** From 29/09/2025 to 22/11/2025
+![Your profile picture](/images/avatar.png)
+### Student Information:
+
+&emsp; **Full Name:** Nguyen Hoang Gia Huy
+
+&emsp; **Phone Number:** 0902566797
+
+&emsp; **Email:** -huynhgse182631@fpt.edu.vn
+
+&emsp; **University:** FPT University
+
+&emsp; **Major:** Information Technology
+
+&emsp; **Class:** AWS082025
+
+&emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
+
+&emsp; **Internship Position:** FCJ Cloud Intern
+
+&emsp; **Internship Duration:** From 29/09/2025 to 22/11/2025
+
+![Your profile picture](/images/avatar.png)
 ### Report Content
 
 1.  [Worklog](1-Worklog/)
