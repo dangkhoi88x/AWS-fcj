@@ -5,40 +5,59 @@ weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
+
 {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
->Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud Journey, giúp team FCJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
+> Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud Journey, giúp team FCJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
 
 ### Đánh giá chung
 
 **1. Môi trường làm việc**  
-Môi trường làm việc rất thân thiện và cởi mở. Các thành viên trong FCJ luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc gọn gàng, thoải mái, giúp mình tập trung tốt hơn. Tuy nhiên, mình nghĩ có thể bổ sung thêm một số buổi giao lưu hoặc team bonding để mọi người hiểu nhau hơn.
+Môi trường làm việc trong chương trình rất thoải mái, thân thiện và dễ trao đổi. Mọi người hỗ trợ nhau khá tích cực, đặc biệt khi mình gặp khó khăn về kỹ thuật như cấu hình AWS, triển khai Elastic Beanstalk hay xử lý lỗi CI/CD. Không gian làm việc online linh hoạt phù hợp với lịch học và làm việc cá nhân. Mình nghĩ chương trình có thể bổ sung thêm các buổi trao đổi hoặc chia sẻ định kỳ để tăng sự kết nối giữa các bạn thực tập sinh.
 
 **2. Sự hỗ trợ của mentor / team admin**  
-Mentor hướng dẫn rất chi tiết, giải thích rõ ràng khi mình chưa hiểu và luôn khuyến khích mình đặt câu hỏi. Team admin hỗ trợ các thủ tục, tài liệu và tạo điều kiện để mình làm việc thuận lợi. Mình đánh giá cao việc mentor cho phép mình thử và tự xử lý vấn đề thay vì chỉ đưa đáp án.
+Mentor hướng dẫn rất chi tiết, nhất là trong các phần phức tạp như thiết kế kiến trúc AWS, sử dụng VPC, triển khai CI/CD và tối ưu backend .NET. Mentor không đưa đáp án ngay mà giúp mình tự phân tích và giải quyết vấn đề — đây là điều mình đánh giá rất cao. Team admin hỗ trợ tài liệu, quy trình và giải đáp thắc mắc nhanh chóng.
 
 **3. Sự phù hợp giữa công việc và chuyên ngành học**  
-Công việc mình được giao phù hợp với kiến thức mình đã học ở trường, đồng thời mở rộng thêm những mảng mới mà mình chưa từng được tiếp cận. Nhờ vậy, mình vừa củng cố kiến thức nền tảng, vừa học thêm kỹ năng thực tế.
+Các nhiệm vụ như xây dựng mô hình 3-tier .NET, Entity Framework Core, repository pattern, thiết kế database SQL Server, triển khai hệ thống lên AWS,… đều phù hợp với kiến thức mình được học. Thực tập giúp mình kết nối lý thuyết trên lớp với thực tiễn triển khai trên môi trường cloud.
 
 **4. Cơ hội học hỏi & phát triển kỹ năng**  
-Trong quá trình thực tập, mình học được nhiều kỹ năng mới như sử dụng công cụ quản lý dự án, kỹ năng làm việc nhóm, và cả cách giao tiếp chuyên nghiệp trong môi trường công ty. Mentor cũng chia sẻ nhiều kinh nghiệm thực tế giúp mình định hướng tốt hơn cho sự nghiệp.
+Tham gia dự án giúp mình học được rất nhiều mảng mới:
+
+- Kiến trúc AWS thực tế (VPC, RDS, S3, CloudFront, WAF, NAT Gateway, Elastic Beanstalk…)
+
+- CI/CD pipeline với CodePipeline – CodeBuild
+
+- Thiết kế kiến trúc theo Well-Architected Framework
+
+- Kỹ năng viết tài liệu kỹ thuật và phân tích hệ thống
+  Ngoài ra, kỹ năng mềm như teamwork, báo cáo tiến độ, giao tiếp khi gặp vấn đề cũng được cải thiện nhiều.
 
 **5. Văn hóa & tinh thần đồng đội**  
-Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn vui vẻ. Khi có dự án gấp, mọi người cùng nhau cố gắng, hỗ trợ không phân biệt vị trí. Điều này giúp mình cảm thấy mình là một phần của tập thể, dù chỉ là thực tập sinh.
+Mọi người làm việc tích cực, hỗ trợ đúng lúc và luôn tôn trọng nhau. Dù mỗi người có lịch cá nhân khác nhau, tinh thần teamwork vẫn được duy trì tốt, nhất là khi các phần kiến trúc AWS cần phải thống nhất chung. Không có áp lực không cần thiết, giúp mình phát triển thoải mái hơn.
 
 **6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về thời gian linh hoạt khi cần thiết. Ngoài ra, việc được tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
-
+Chương trình tạo điều kiện giờ giấc linh hoạt và hỗ trợ tài liệu học tập đầy đủ. Ngoài ra, việc được tham gia vào dự án end-to-end thật sự là “phúc lợi lớn nhất” vì mình học được nhiều hơn môi trường học thuật thông thường.
 
 ### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
 
+- Điều mình hài lòng nhất:
+  Cơ hội được làm một dự án cloud thực tế từ kiến trúc → triển khai → testing → tối ưu chi phí. Đây là trải nghiệm mà trước đây mình chưa có cơ hội tiếp cận sâu như vậy.
+
+- Điều mình nghĩ có thể cải thiện:
+  Có thể bổ sung thêm buổi hướng dẫn tập trung về AWS nâng cao hoặc workshop thực chiến để thống nhất kiến thức nhanh hơn.
+
+- Có giới thiệu cho bạn bè không?
+  Có. Vì chương trình giúp thực tập sinh được làm dự án thật, được mentor hỗ trợ tận tâm và học được kỹ năng thực tế rất giá trị.
 
 ### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
-- Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+
+- Tổ chức thêm các buổi workshop AWS (VPC nâng cao, bảo mật, tối ưu chi phí…).
+
+- Thêm buổi demo sản phẩm hoặc review sprint định kỳ để mọi người học hỏi lẫn nhau.
+
+- Nếu có thể, nên cung cấp thêm tài liệu hoặc checklist chuẩn cho quy trình triển khai AWS.
+
+- Nếu chương trình có mở rộng dự án hoặc internship nâng cao, mình rất muốn tiếp tục tham gia để phát triển thêm.
