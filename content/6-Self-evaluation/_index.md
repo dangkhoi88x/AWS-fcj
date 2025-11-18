@@ -10,7 +10,7 @@ pre: " <b> 6. </b> "
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
 {{% /notice %}}
 
-During my internship at [Tên Công Ty / Tổ Chức] from [start date] to [end date], I had the opportunity to work directly on a real-world cloud transformation project titled “Digital Transformation for Mini-Market on AWS Cloud”.
+During my internship at AMAZON WEB SERVICES VIETNAM COMPANY LIMITED from  29/9/2025 to 22/11/2025, I had the opportunity to work directly on a real-world cloud transformation project titled “Digital Transformation for Mini-Market on AWS Cloud”.
 Throughout this internship, I applied the knowledge learned in school—software engineering, cloud computing, and system design—to build a complete .NET 3-tier e-commerce platform deployed on the AWS Cloud.
 
 I contributed to the development of key modules in the system architecture, including:

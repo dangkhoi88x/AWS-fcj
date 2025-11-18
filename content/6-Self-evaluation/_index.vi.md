@@ -10,7 +10,7 @@ pre: " <b> 6. </b> "
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-Trong thời gian thực tập tại [Tên Công Ty/Tổ Chức] từ [ngày bắt đầu] đến [ngày kết thúc], tôi có cơ hội tham gia vào dự án thực tế “Chuyển đổi số cho Mini-market trên nền tảng AWS Cloud”.
+Trong thời gian thực tập tại CÔNG TY TNHH AMAZON WEB SERVICES VIỆT NAM từ 29/9/2025 đến 22/11/2025, tôi có cơ hội tham gia vào dự án thực tế “Chuyển đổi số cho Mini-market trên nền tảng AWS Cloud”.
 Trong quá trình thực tập, tôi đã áp dụng các kiến thức được học ở trường—từ công nghệ phần mềm, cơ sở dữ liệu, đến điện toán đám mây—để xây dựng một nền tảng e-commerce .NET 3 tầng kết hợp với các dịch vụ AWS.
 
 Tôi tham gia vào nhiều đầu việc quan trọng của dự án, bao gồm:
