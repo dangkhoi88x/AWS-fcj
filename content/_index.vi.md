@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 29/09/2025 đến ngày 22/11/2025
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+![Ảnh đại diện của bạn](/images/cv1.jpg)
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
