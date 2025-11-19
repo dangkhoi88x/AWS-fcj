@@ -12,6 +12,8 @@ pre: " <b> 1.5. </b> "
 - Build and design **Serverless applications** integrating **Lambda**, **API Gateway**, **S3**, and **DynamoDB**.
 - Explore AWS **database services** including **RDS**, **Aurora**, **DynamoDB**, **Redshift**, and **ElastiCache**.
 
+**Time Period:** 27/10/2025 - 02/11/2025
+
 ---
 
 ### Weekly Tasks Overview

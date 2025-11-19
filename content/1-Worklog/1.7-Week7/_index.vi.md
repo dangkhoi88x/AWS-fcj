@@ -11,6 +11,8 @@ pre: " <b> 1.7. </b> "
 - Quản lý, cấu hình và tối ưu **Amazon VPC (Virtual Private Cloud)** cho hệ thống mạng riêng.
 - Học cách **sao lưu, phục hồi và triển khai kế hoạch khôi phục thảm họa (Disaster Recovery)** với các công cụ AWS.
 
+**Thời gian:** 10/11/2025 - 16/11/2025
+
 ---
 
 ### Tổng quan Nhiệm vụ Tuần

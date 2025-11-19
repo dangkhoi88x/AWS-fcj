@@ -11,6 +11,8 @@ pre: " <b> 1.8. </b> "
 - Tìm hiểu và trải nghiệm các **dịch vụ mở rộng khác** của AWS như IoT, Ground Station và RoboMaker.
 - Nghiên cứu chuyên sâu các **tài liệu whitepaper, kiến trúc tham chiếu và best practices** chính thức từ AWS.
 
+**Thời gian:** 17/11/2025 - 22/11/2025
+
 ---
 
 ### Tổng quan Nhiệm vụ Tuần

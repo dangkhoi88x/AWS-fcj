@@ -12,6 +12,8 @@ pre: " <b> 1.4. </b> "
 - Tìm hiểu về **CloudFront**, **Global Accelerator**, và các phương pháp giảm độ trễ khi phân phối nội dung.
 - Nghiên cứu các dịch vụ lưu trữ khác của AWS như **FSx**, **Storage Gateway**, và tích hợp hệ thống qua **SQS**, **SNS**, **Step Functions**.
 
+**Thời gian:** 20/10/2025 - 26/10/2025
+
 ---
 
 ### Tổng quan Nhiệm vụ Tuần

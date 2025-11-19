@@ -11,6 +11,8 @@ pre: " <b> 1.7. </b> "
 - Configure, manage, and optimize **Amazon VPC (Virtual Private Cloud)** for secure private networking.  
 - Learn how to **back up, restore, and implement Disaster Recovery (DR)** using AWS services.  
 
+**Time Period:** 10/11/2025 - 16/11/2025
+
 ---
 
 ### Weekly Task Overview

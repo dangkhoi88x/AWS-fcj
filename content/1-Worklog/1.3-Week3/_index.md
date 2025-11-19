@@ -12,6 +12,8 @@ pre: " <b> 1.3. </b> "
 - Learn how to configure and manage **Amazon Route 53** for DNS and routing control.
 - Study common **AWS Solution Architectures** and their best-practice design patterns.
 
+**Time Period:** 13/10/2025 - 19/10/2025
+
 ---
 
 ### Weekly Tasks Overview

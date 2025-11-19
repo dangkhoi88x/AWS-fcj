@@ -12,6 +12,8 @@ pre: " <b> 1.6. </b> "
 - Nâng cao kỹ năng **giám sát, kiểm tra, và tối ưu hiệu suất hệ thống** bằng CloudWatch, CloudTrail, và Trusted Advisor.
 - Tìm hiểu về **quản lý danh tính nâng cao** trong AWS bao gồm IAM Roles, Federated Access, và SSO.
 
+**Thời gian:** 03/11/2025 - 09/11/2025
+
 ---
 
 ### Tổng quan Nhiệm vụ Tuần

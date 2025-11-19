@@ -12,6 +12,8 @@ pre: " <b> 1.4. </b> "
 - Learn to use **CloudFront** and **Global Accelerator** for global content delivery and latency reduction.
 - Explore additional AWS storage solutions such as **FSx**, **Storage Gateway**, and service integration using **SQS**, **SNS**, and **Step Functions**.
 
+**Time Period:** 20/10/2025 - 26/10/2025
+
 ---
 
 ### Weekly Tasks Overview

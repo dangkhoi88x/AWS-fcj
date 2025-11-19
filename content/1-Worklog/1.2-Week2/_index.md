@@ -12,16 +12,18 @@ pre: " <b> 1.2. </b> "
 - Explore **Amazon VPC** and **AWS Site-to-Site VPN** networking fundamentals.
 - Reinforce **C# programming** basics.
 
+**Time Period:** 06/10/2025 - 12/10/2025
+
 ---
 
 ### Weekly Tasks Overview
 
 | Day | Activity                                                                                                                                                                                                                                                                                       | Start Date | End Date   | Reference                                 |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ----------------------------------------- |
-| 1   | - Studied **IAM** fundamentals <br> + Created and assigned **users, groups, roles** <br> + Attached **permission policies** for least-privilege access <br> + Verified access through IAM Console                                                                                              | 07/10/2025 | 07/10/2025 | <https://000002.awsstudygroup.com/>       |
+| 1   | - Studied **IAM** fundamentals <br> + Created and assigned **users, groups, roles** <br> + Attached **permission policies** for least-privilege access <br> + Verified access through IAM Console                                                                                              | 06/10/2025 | 06/10/2025 | <https://000002.awsstudygroup.com/>       |
 | 2   | - Deployed and configured an **EC2 instance** <br> + Selected **Amazon Linux 2023 (Free Tier)** <br> + Configured **key pair** and **security group** (SSH) <br> + Connected via SSH and validated status <br> + Practiced **VPC networking** basics (subnets, route tables, Internet Gateway) | 07/10/2025 | 07/10/2025 | <https://000003.awsstudygroup.com/>       |
 | 3   | - Explored **Amazon Bedrock Playground** <br> + Tested models like _Claude 3 Haiku_ and _Titan Text_ <br> + Wrote sample prompts and evaluated responses <br> + Tried varied scenarios to observe model behavior                                                                               | 08/10/2025 | 08/10/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Reviewed **C# fundamentals** <br> + Revisited control flow, loops, classes, and objects <br> + Wrote small sample programs to validate logic <br> + Summarized key AWS services with ChatGPT for quick recall                                                                                | 11/10/2025 | 11/10/2025 | -                                         |
+| 4   | - Reviewed **C# fundamentals** <br> + Revisited control flow, loops, classes, and objects <br> + Wrote small sample programs to validate logic <br> + Summarized key AWS services with ChatGPT for quick recall                                                                                | 09/10/2025 | 10/10/2025 | -                                         |
 
 ---
 

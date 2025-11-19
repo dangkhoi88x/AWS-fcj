@@ -11,6 +11,8 @@ pre: " <b> 1.8. </b> "
 - Explore additional **extended AWS services** such as IoT, Ground Station, and RoboMaker.  
 - Study in-depth **whitepapers, reference architectures, and best practices** provided by AWS.  
 
+**Time Period:** 17/11/2025 - 22/11/2025
+
 ---
 
 ### Weekly Task Overview

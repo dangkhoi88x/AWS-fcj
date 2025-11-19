@@ -12,6 +12,8 @@ pre: " <b> 1.6. </b> "
 - Strengthen skills in **monitoring, auditing, and system performance optimization** using CloudWatch, CloudTrail, and Trusted Advisor.  
 - Study **Advanced Identity Management** in AWS, including IAM Roles, Federated Access, and AWS SSO.
 
+**Time Period:** 03/11/2025 - 09/11/2025
+
 ---
 
 ### Weekly Task Overview

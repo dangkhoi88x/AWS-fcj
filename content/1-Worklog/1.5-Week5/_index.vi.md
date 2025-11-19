@@ -12,6 +12,8 @@ pre: " <b> 1.5. </b> "
 - Thiết kế và xây dựng **ứng dụng Serverless** tích hợp **Lambda**, **API Gateway**, **S3**, và **DynamoDB**.
 - Tìm hiểu các dịch vụ **cơ sở dữ liệu AWS** như **RDS**, **Aurora**, **DynamoDB**, **Redshift**, và **ElastiCache**.
 
+**Thời gian:** 27/10/2025 - 02/11/2025
+
 ---
 
 ### Tổng quan Nhiệm vụ Tuần
