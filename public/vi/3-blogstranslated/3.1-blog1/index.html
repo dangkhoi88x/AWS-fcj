@@ -15,21 +15,21 @@
     <title>Blog 1 :: Báo cáo thực tập</title>
 
     
-    <link href="../../../css/nucleus.css?1764903790" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1764903790" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1764903790" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1764903790" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1764903790" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1764903790" rel="stylesheet">
-    <link href="../../../css/atom-one-dark-reasonable.css?1764903790" rel="stylesheet">
-    <link href="../../../css/theme.css?1764903790" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1764903790" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1764905602" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1764905602" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1764905602" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1764905602" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1764905602" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1764905602" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1764905602" rel="stylesheet">
+    <link href="../../../css/theme.css?1764905602" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1764905602" rel="stylesheet">
     
-    <link href="../../../css/theme-workshop.css?1764903790" rel="stylesheet">
+    <link href="../../../css/theme-workshop.css?1764905602" rel="stylesheet">
     
     
 
-    <script src="../../../js/jquery-3.3.1.min.js?1764903790"></script>
+    <script src="../../../js/jquery-3.3.1.min.js?1764905602"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -88,14 +88,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../../js/lunr.min.js?1764903790"></script>
-<script type="text/javascript" src="../../../js/auto-complete.js?1764903790"></script>
+<script type="text/javascript" src="../../../js/lunr.min.js?1764905602"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1764905602"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/AWS-fcj\/\/vi";
     
 </script>
-<script type="text/javascript" src="../../../js/search.js?1764903790"></script>
+<script type="text/javascript" src="../../../js/search.js?1764905602"></script>
  
   </div>
 
@@ -384,7 +384,7 @@
         "
 >
   <a href="../../../vi/3-blogstranslated/3.1-blog1/">
-     <b> 3.2. </b> Blog 1 
+     <b> 3.1. </b> Blog 1 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -1225,21 +1225,36 @@
     <li><a href="#kiến-trúc-giải-pháp">Kiến trúc giải pháp</a></li>
     <li><a href="#điểm-nổi-bật-của-tích-hợp">Điểm nổi bật của tích hợp</a>
       <ul>
-        <li><a href="#amazon-kinesis-video-streams"><strong>Amazon Kinesis Video Streams</strong></a></li>
-        <li><a href="#plumerai"><strong>Plumerai</strong></a></li>
+        <li><a href="#amazon-kinesis-video-streams">Amazon Kinesis Video Streams</a></li>
+        <li><a href="#plumerai">Plumerai</a></li>
+        <li><a href="#realtek-ameba-pro2">Realtek Ameba Pro2</a></li>
       </ul>
     </li>
-    <li><a href="#realtek-ameba-pro2">Realtek Ameba Pro2</a></li>
     <li><a href="#hướng-dẫn-từng-bước">Hướng dẫn từng bước</a>
       <ul>
-        <li><a href="#điều-kiện-tiên-quyết"><strong>Điều kiện tiên quyết</strong></a></li>
+        <li><a href="#điều-kiện-tiên-quyết">Điều kiện tiên quyết</a></li>
       </ul>
     </li>
     <li><a href="#thiết-lập-môi-trường-xây-dựng">Thiết lập môi trường xây dựng</a>
       <ul>
-        <li><a href="#tạo-ec2-instance"><strong>Tạo EC2 Instance</strong></a></li>
+        <li><a href="#thiết-lập-phiên-bản-amazon-ec2">Thiết lập phiên bản Amazon EC2:</a></li>
+        <li><a href="#lấy-thư-viện-plumerai">Lấy thư viện Plumerai:</a></li>
+        <li><a href="#lấy-ameba-sdk">Lấy Ameba SDK:</a></li>
+        <li><a href="#cài-đặt-các-phụ-thuộc-và-cấu-hình-môi-trường">Cài đặt các phụ thuộc và cấu hình môi trường</a></li>
+        <li><a href="#cấu-hình-mẫu-trong-kinesis-video-streams-producer-sdk">Cấu hình mẫu trong Kinesis Video Streams Producer SDK</a></li>
       </ul>
     </li>
+    <li><a href="#biên-dịch-và-xây-dựng">Biên dịch và xây dựng</a></li>
+    <li><a href="#chạy-mẫu-trong-ameba-pro2">Chạy mẫu trong Ameba Pro2</a>
+      <ul>
+        <li><a href="#tải-xuống-và-flash-hình-ảnh-nhị-phân">Tải xuống và flash hình ảnh nhị phân:</a></li>
+        <li><a href="#cấu-hình-wifi">Cấu hình WiFi:</a></li>
+      </ul>
+    </li>
+    <li><a href="#xác-minh-video-trên-aws-management-console">Xác minh video trên AWS Management Console</a></li>
+    <li><a href="#tóm-tắt-hiệu-suất">Tóm tắt hiệu suất</a></li>
+    <li><a href="#chi-phí-và-dọn-dẹp">Chi phí và dọn dẹp</a></li>
+    <li><a href="#kết-luận">Kết luận</a></li>
   </ul>
 </nav></div>
 </div>
@@ -1280,98 +1295,285 @@
 <h2 id="kiến-trúc-giải-pháp">Kiến trúc giải pháp</h2>
 <p>Hình dưới đây minh họa kiến trúc giải pháp mà bài viết này sử dụng:</p>
 <ul>
-<li>Bắt đầu từ camera, firmware của thiết bị đã tích hợp <strong>Realtek SDK</strong> để truy cập các mô-đun camera thông qua các API được xác định.</li>
-<li>Các đoạn video được truyền đến <strong>các mô hình học máy của Plumerai</strong> để thực hiện phát hiện đối tượng.</li>
-<li>Ứng dụng mẫu thêm kết quả phát hiện dưới dạng <strong>lớp phủ bounding box</strong> trên các đoạn video gốc. Ứng dụng này liên tục tải các đoạn video lên đám mây thông qua <strong>Kinesis Video Streams Producer SDK</strong>.<br>
-<em>(Bạn cũng có thể thiết lập để chỉ tải lên các đoạn video 20 giây khi có phát hiện.)</em></li>
-<li><strong>Producer SDK</strong> sử dụng <strong>PutMedia API</strong> với kết nối HTTPS lâu dài để tải liên tục các mảnh MKV.</li>
-<li>Dữ liệu media được thu nhận và lưu trữ bền vững để phân tích về sau.</li>
-<li>Một <strong>ứng dụng front-end</strong> có thể phát lại video trực tiếp hoặc video đã ghi thông qua <strong>HLS hoặc DASH</strong>.</li>
-<li>Giải pháp cung cấp dữ liệu video và âm thanh vào <strong>Large Language Models (LLMs)</strong> để khai thác insight từ Agentic AI.<br>
-<em>(Tìm kiếm video ngữ nghĩa sẽ được trình bày trong bài tiếp theo.)</em></li>
+<li>
+<p>Bắt đầu từ camera, firmware của thiết bị đã tích hợp Realtek SDK để truy cập các mô-đun camera thông qua các API được xác định.</p>
+</li>
+<li>
+<p>Các đoạn video được truyền đến các mô hình học máy của Plumerai để thực hiện phát hiện đối tượng.</p>
+</li>
+<li>
+<p>Ứng dụng mẫu thêm kết quả phát hiện dưới dạng lớp phủ hộp giới hạn (bonding box) trên các đoạn video gốc. Ứng dụng mẫu này liên tục tải các đoạn video lên đám mây thông qua Kinesis Video Streams Producer SDK. (Lưu ý thêm, bạn cũng có thể thiết lập kết quả phát hiện để kích hoạt tải lên các đoạn video 20 giây.)</p>
+</li>
+<li>
+<p>Kinesis Video Streams Producer SDK sử dụng PutMedia API với kết nối HTTPS lâu dài để tải các đoạn MKV lên một cách liên tục theo kiểu truyền tải.</p>
+</li>
+<li>
+<p>Dữ liệu truyền thông sẽ được thu nhận và dịch vụ lưu trữ tất cả dữ liệu truyền thông một cách bền vững để phân tích sau này.</p>
+</li>
+<li>
+<p>Một ứng dụng giao diện người dùng thực hiện phát lại video trực tiếp hoặc các video đã ghi trước đó, dựa vào các giao thức HLS hoặc DASH từ Kinesis Video Streams.</p>
+</li>
+<li>
+<p>Giải pháp này cung cấp dữ liệu video và âm thanh vào các Mô hình Ngôn ngữ Lớn (Large Language Models - LLMs) để thu thập thông tin chi tiết từ Agentic AI. (Chúng tôi sẽ đề cập đến tìm kiếm video ngữ nghĩa trong bài viết tiếp theo).</p>
+</li>
 </ul>
 <hr>
 <h2 id="điểm-nổi-bật-của-tích-hợp">Điểm nổi bật của tích hợp</h2>
-<h3 id="amazon-kinesis-video-streams"><strong>Amazon Kinesis Video Streams</strong></h3>
-<p>Kinesis Video Streams mang lại nhiều lợi ích cho camera IP, robot và ô tô:</p>
+<h3 id="amazon-kinesis-video-streams">Amazon Kinesis Video Streams</h3>
+<p>Kinesis Video Streams thay đổi cách các doanh nghiệp xử lý các giải pháp video cho camera IP, robot và ô tô. Các lợi ích chính bao gồm:</p>
 <ul>
-<li><strong>Kiến trúc được quản lý hoàn toàn</strong> → đội kỹ thuật chỉ cần tập trung vào phát triển tính năng.</li>
-<li><strong>AWS SDK mã nguồn mở</strong>, tránh phụ thuộc nền tảng.</li>
-<li><strong>Mô hình trả phí theo sử dụng linh hoạt</strong>, không tốn chi phí cho đến khi camera hoạt động thật.</li>
-</ul>
-<h3 id="plumerai"><strong>Plumerai</strong></h3>
-<p>Plumerai chuyên về AI nhúng và tối ưu mô hình để chạy trên phần cứng nhỏ, hiệu năng thấp:</p>
-<ul>
-<li>Tối ưu hoá CPU Arm Cortex-M ở mức <strong>assembly</strong>, tận dụng lệnh DSP.</li>
-<li><strong>Neural Architecture Search (NAS)</strong> chọn kiến trúc AI tối ưu cho Realtek NPU.</li>
-<li>Tận dụng <strong>hardware accelerators</strong> (scaler, format converter) của Realtek.</li>
-<li>Tích hợp tốt với <strong>RTOS</strong> và khung truyền thông Realtek.</li>
-<li>Khởi động nhanh, mô hình huấn luyện trên <strong>30 triệu video &amp; ảnh</strong>.</li>
-</ul>
-<p><strong>Hiệu suất thực tế:</strong></p>
-<ul>
-<li>Độ chính xác cao, bộ nhớ thấp.</li>
-<li>Góc nhìn rộng <strong>180°</strong>.</li>
-<li>Phát hiện người trong phạm vi <strong>20m+</strong>.</li>
-<li>Theo dõi <strong>20 người cùng lúc</strong>.</li>
-<li>Hoạt động tốt cả ban ngày và đêm tối.</li>
+<li>
+<p><strong>Kiến trúc được quản lý hoàn toàn</strong>: Điều này giúp các nhóm kỹ thuật tập trung vào đổi mới thay vì cơ sở hạ tầng, lý tưởng cho các công ty có nguồn lực hạn chế.</p>
+</li>
+<li>
+<p><strong>AWS SDKs mã nguồn mở</strong>: Các thương hiệu hàng đầu đặc biệt đánh giá cao sự độc lập khỏi các ràng buộc nền tảng.</p>
+</li>
+<li>
+<p><strong>Mô hình định giá trả theo sử dụng linh hoạt</strong>: Trong khi việc phát triển thiết bị có thể mất hàng tháng hoặc hàng năm, bạn không phải trả phí cho đến khi camera hoạt động. Với tỷ lệ kích hoạt lưu trữ đám mây điển hình dưới 30% và giảm hàng năm, chi phí thấp hơn đáng kể so với phí cấp phép cố định.</p>
+</li>
 </ul>
 <hr>
-<h2 id="realtek-ameba-pro2">Realtek Ameba Pro2</h2>
-<p>Realtek Ameba Pro2 bao gồm:</p>
+<h3 id="plumerai">Plumerai</h3>
+<p>Công ty Plumerai chuyên về các giải pháp AI nhúng, tập trung vào việc làm cho học sâu trở nên nhỏ gọn và hiệu quả. Mô hình Plumerai giúp cung cấp suy luận trên phần cứng nhỏ, giá cả phải chăng và tiết kiệm năng lượng. Công ty cũng tối ưu hóa các mô hình AI cho nền tảng Realtek Ameba Pro2 thông qua:</p>
 <ul>
-<li><strong>Integrated Video Encoder (IVE)</strong></li>
-<li><strong>Image Signal Processor (ISP)</strong></li>
-<li><strong>Video Offload Engine (VOE)</strong></li>
-<li><strong>Neural Processing Unit (NPU)</strong></li>
-<li><strong>Parallel Processing Unit (PPU)</strong></li>
+<li>
+<p><strong>Tối ưu hóa cấp độ lắp ráp</strong>: Tối đa hóa hiệu suất CPU Arm Cortex-M và tận dụng các lệnh DSP để nâng cao khả năng xử lý tín hiệu.</p>
+</li>
+<li>
+<p><strong>Tìm kiếm Kiến trúc Thần kinh (Neural Architecture Search - NAS)</strong>: Chọn các mô hình AI tối ưu cho NPU và kiến trúc bộ nhớ của Realtek để đạt được gia tốc NPU 0.4 TOPS.</p>
+</li>
+<li>
+<p>Mô hình Plumerai sử dụng bộ tăng tốc phần cứng trên chip của Realtek (bộ chia tỷ lệ, bộ chuyển đổi định dạng) để giảm tải tính toán.</p>
+</li>
+<li>
+<p><strong>Mô hình AI hỗ trợ RTOS</strong>: Tích hợp liền mạch với hệ điều hành thời gian thực của SoC.</p>
+</li>
+<li>
+<p>Ứng dụng tích hợp với khung truyền thông của Realtek.</p>
+</li>
+<li>
+<p><strong>Thiết kế khởi động nhanh</strong>: Hỗ trợ thời gian khởi động nhanh, cải thiện tuổi thọ pin và đảm bảo tốc độ cao trong phát hiện đối tượng hoạt động.</p>
+</li>
+<li>
+<p>Mô hình AI biên được huấn luyện trên 30 triệu hình ảnh và video có gắn nhãn.</p>
+</li>
 </ul>
-<p>Khả năng chính:</p>
+<p>Những cải tiến này mang lại hiệu suất thực tế như sau:</p>
 <ul>
-<li>Tốn rất ít CPU.</li>
-<li>Phản hồi gần thời gian thực.</li>
-<li>Xử lý video ngay cả khi đang khởi động.</li>
-<li>Truyền tới SD Card và Cloud qua WiFi/Ethernet.</li>
-<li>Hỗ trợ mạnh mẽ inference AI tại biên.</li>
+<li>
+<p>Cung cấp độ chính xác mà không lãng phí bộ nhớ.</p>
+</li>
+<li>
+<p>Ghi lại các cảnh rộng thông qua ống kính có trường nhìn 180°.</p>
+</li>
+<li>
+<p>Phát hiện cá nhân ở khoảng cách hơn 20m (65ft).</p>
+</li>
+<li>
+<p>Xử lý đám đông bằng cách theo dõi đồng thời 20 người.</p>
+</li>
+<li>
+<p>Duy trì theo dõi cá nhân với hệ thống ID duy nhất.</p>
+</li>
+<li>
+<p>Hoạt động ổn định trong ánh sáng ban ngày và bóng tối hoàn toàn.</p>
+</li>
+</ul>
+<hr>
+<h3 id="realtek-ameba-pro2">Realtek Ameba Pro2</h3>
+<p>Hình trên minh họa kiến trúc dữ liệu của Realtek Ameba Pro2. Nó bao gồm Bộ mã hóa Video Tích hợp (Integrated Video Encoder - IVE) và Bộ xử lý Tín hiệu Hình ảnh (Image Signal Processor - ISP) xử lý dữ liệu thô của phương tiện và truyền kết quả đến Bộ xử lý Tải Video (Video Offload Engine - VOE). VOE sau đó quản lý nhiều kênh video và luồng video đồng thời để hỗ trợ thuật toán phát hiện chuyển động. Đơn vị Xử lý Thần kinh (Neural Processing Unit - NPU) thực hiện suy luận trên các hình ảnh hoặc vùng hình ảnh. Đơn vị Xử lý Song song (Parallel Processing Unit - PPU) xử lý các công việc đa nhiệm như cắt Vùng Quan tâm (Regions of Interests - ROIs) từ hình ảnh độ phân giải cao, thay đổi kích thước đầu vào suy luận NPU và lấy đầu ra cuối cùng từ các kênh độ phân giải cao. Kiến trúc này mở khóa các khả năng mạnh mẽ để hỗ trợ phân tích video tại biên, bao gồm:</p>
+<ul>
+<li>
+<p>Hoạt động với công suất CPU tối thiểu để đạt hiệu quả tối đa.</p>
+</li>
+<li>
+<p>Phản hồi gần như thời gian thực với chuyển động.</p>
+</li>
+<li>
+<p>Bắt đầu xử lý video ngay cả trong quá trình khởi động.</p>
+</li>
+<li>
+<p>Truyền tải đến cả thẻ SD và đám mây thông qua WiFi hoặc Ethernet bảo mật.</p>
+</li>
+<li>
+<p>Tận dụng NPU để cung cấp hiệu suất AI vượt trội.</p>
+</li>
+<li>
+<p>Tích hợp với các mô hình Plumerai và Kinesis Video Streams thông qua SDK khung đa phương tiện.</p>
+</li>
 </ul>
 <hr>
 <h2 id="hướng-dẫn-từng-bước">Hướng dẫn từng bước</h2>
-<h3 id="điều-kiện-tiên-quyết"><strong>Điều kiện tiên quyết</strong></h3>
-<p>Bạn cần:</p>
+<p>Phần này phác thảo các bước xây dựng giải pháp để chạy AI biên và truyền tải các đoạn video.</p>
+<h3 id="điều-kiện-tiên-quyết">Điều kiện tiên quyết</h3>
 <ul>
-<li>Tài khoản AWS có quyền:
+<li>
+<p>Tài khoản AWS với quyền cho:</p>
 <ul>
-<li>Đăng nhập AWS Console</li>
-<li>API Kinesis Video Streams<br>
-(<em>GetDataEndpoint, DescribeStream, PutMedia</em>)</li>
-<li>Tạo EC2 instance để build SDK</li>
+<li>Đăng nhập vào AWS Console.</li>
+<li>API Kinesis Video Streams (GetDataEndpoint, DescribeStream, PutMedia).</li>
+<li>Tạo phiên bản Amazon Elastic Compute Cloud (Amazon EC2) để xây dựng SDK và tệp nhị phân.</li>
 </ul>
 </li>
-<li>Stream có tên <code>kvs-plumerai-realtek-stream</code></li>
-<li>Realtek Ameba Pro2 MCU</li>
-<li>Kinh nghiệm Linux basic</li>
-<li>SDK Realtek &amp; thư viện Plumerai</li>
-<li>Kết nối internet</li>
+<li>
+<p>Một tài nguyên luồng có tên &ldquo;kvs-plumerai-realtek-stream&rdquo; được tạo trên Kinesis Video Streams Console.</p>
+</li>
+<li>
+<p>Realtek Ameba Pro2 Mini MCU.</p>
+</li>
+<li>
+<p>Kiến thức cơ bản về hệ thống nhúng và làm việc trong môi trường Linux.</p>
+</li>
+<li>
+<p>Kết nối internet để tải SDK và tải video lên AWS.</p>
+</li>
+<li>
+<p>Tệp thư viện và mô hình học máy từ Plumerai. (Vui lòng gửi yêu cầu của bạn trên Trang web Plumerai.)</p>
+</li>
 </ul>
 <hr>
 <h2 id="thiết-lập-môi-trường-xây-dựng">Thiết lập môi trường xây dựng</h2>
-<h3 id="tạo-ec2-instance"><strong>Tạo EC2 Instance</strong></h3>
+<p>Bài viết này sử dụng một Amazon EC2 với Ubuntu LTS 22.04 làm môi trường xây dựng. Bạn cũng có thể sử dụng máy tính Ubuntu của riêng mình để biên dịch chéo SDK.</p>
+<h3 id="thiết-lập-phiên-bản-amazon-ec2">Thiết lập phiên bản Amazon EC2:</h3>
 <ol>
-<li>Vào AWS Console → EC2.</li>
-<li>Launch instance:
+<li>
+<p>Đăng nhập vào AWS Management Console và điều hướng đến Amazon EC2.</p>
+</li>
+<li>
+<p>Khởi chạy một phiên bản với cấu hình sau:</p>
 <ul>
-<li><strong>Tên:</strong> <code>KVS_AmebaPlumerAI_poc</code></li>
-<li><strong>OS:</strong> Ubuntu 22.04 LTS</li>
-<li><strong>Loại máy:</strong> t3.large</li>
-<li><strong>Key pair:</strong> <code>kvs-plumerai-realtek-keypair</code></li>
-<li><strong>Storage:</strong> 100 GiB</li>
+<li>Tên phiên bản: KVS_AmebaPlumerAI_poc</li>
+<li>Hình ảnh Ứng dụng và Hệ điều hành: Ubuntu Server 22.04 LTS (HVM)</li>
+<li>Loại phiên bản: t3.large</li>
+<li>Tạo một cặp khóa mới để đăng nhập: kvs-plumerai-realtek-keypair</li>
+<li>Cấu hình lưu trữ: 100GiB</li>
+<li>Thực hiện các điều kiện tiên quyết kết nối SSH để cho phép lưu lượng SSH đến.</li>
 </ul>
 </li>
-<li>Mở port SSH.</li>
-<li>SSH vào EC2:</li>
+<li>
+<p>Tải script mẫu từ Github:</p>
+</li>
 </ol>
+<p>Sử dụng lệnh sau để đăng nhập vào phiên bản Amazon EC2 của bạn (hãy đảm bảo thay xxx.yyy.zzz bằng địa chỉ IP của phiên bản). Để biết hướng dẫn chi tiết, xem Kết nối với phiên bản Linux của bạn bằng ứng dụng khách SSH.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -o ServerAliveInterval<span style="color:#f92672">=</span><span style="color:#ae81ff">60</span> -i kvs-plumerai-realtek-keypair.pem ubuntu@54.xxx.yyy.zzz
-</span></span></code></pre></div>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/aws-samples/sample-kvs-edge_ai-video-streaming-solution.git
+</span></span><span style="display:flex;"><span>cd ./sample-kvs-edge_ai-video-streaming-solution/KVS_Ameba_Plumerai
+</span></span></code></pre></div><h3 id="lấy-thư-viện-plumerai">Lấy thư viện Plumerai:</h3>
+<p>Sử dụng biểu mẫu liên hệ với chúng tôi của Plumerai, gửi yêu cầu để nhận một bản sao gói demo của họ. Khi bạn đã có gói, thay thế thư mục &ldquo;plumerai&rdquo; bằng nó trong phiên bản Amazon EC2. Cấu trúc thư mục được cập nhật nên là như sau:</p>
+<pre tabindex="0"><code>KVS_Ameba_Plumerai/
+├── plumerai/
+│   ├── include/
+│   ├── lib/
+│   └── models/
+└── ...
+</code></pre><h3 id="lấy-ameba-sdk">Lấy Ameba SDK:</h3>
+<p>Vui lòng liên hệ với Realtek để lấy Ameba Pro2 SDK mới nhất. Trong cấu trúc thư mục, thay thế &ldquo;ambpro2_sdk&rdquo; trong Amazon EC2. Cấu trúc thư mục nên là như sau:</p>
+<pre tabindex="0"><code>KVS_Ameba_Plumerai/
+├── ambpro2_sdk/
+│   ├── component/
+│   ├── project/
+│   └── ...
+└── ...
+</code></pre><h3 id="cài-đặt-các-phụ-thuộc-và-cấu-hình-môi-trường">Cài đặt các phụ thuộc và cấu hình môi trường</h3>
+<p>Chạy script <code>setup_kvs_ameba_plumerai.sh</code> trong thư mục <code>sample-kvs-edge_ai-video-streaming-solution</code> từ kho lưu trữ Github:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod +x setup_kvs_ameba_plumerai.sh
+</span></span><span style="display:flex;"><span>./setup_kvs_ameba_plumerai.sh
+</span></span></code></pre></div><p>Script sẽ tự động cài đặt các phụ thuộc Linux, xây dựng toolchain Realtek, chạy các bản vá cần thiết của Plumerai, sao chép tệp mô hình và tải xuống Kinesis Video Streams Producer SDK. Nếu bạn gặp lỗi trong quá trình này, vui lòng liên hệ với Realtek hoặc Plumerai để được hỗ trợ kỹ thuật.</p>
+<hr>
+<h3 id="cấu-hình-mẫu-trong-kinesis-video-streams-producer-sdk">Cấu hình mẫu trong Kinesis Video Streams Producer SDK</h3>
+<p>Sử dụng các thông tin sau để cấu hình thông tin xác thực AWS, tên luồng và khu vực AWS. Những thông tin này có thể được tìm thấy trong tệp <code>component/example/kvs_producer_mmf/sample_config.h</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// KVS general configuration
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#define AWS_ACCESS_KEY &#34;xxxxx&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define AWS_SECRET_KEY &#34;xxxxx&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// KVS stream configuration
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#define KVS_STREAM_NAME &#34;kvs-plumerai-realtek-stream&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define AWS_KVS_REGION &#34;us-east-1&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define AWS_KVS_SERVICE &#34;kinesisvideo&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define AWS_KVS_HOST AWS_KVS_SERVICE &#34;.&#34; AWS_KVS_REGION &#34;.amazonaws.com&#34;
+</span></span></span></code></pre></div><p>Bình luận bỏ <code>example_kvs_producer_mmf();</code> và <code>example_kvs_producer_with_object_detection();</code> trong tệp <code>/home/ubuntu/KVS_Ameba_Plumerai/ambpro2_sdk/component/example/kvs_producer_mmf/app_example</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">//example_kvs_producer_mmf();
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//example_kvs_producer_with_object_detection();
+</span></span></span></code></pre></div><hr>
+<h2 id="biên-dịch-và-xây-dựng">Biên dịch và xây dựng</h2>
+<p>Sử dụng mã sau để điều hướng đến thư mục KVS_Ameba_Plumerai và biên dịch, xây dựng các cập nhật.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ./KVS_Ameba_Plumerai
+</span></span><span style="display:flex;"><span>cmake -DVIDEO_EXAMPLE<span style="color:#f92672">=</span>ON -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release -DCMAKE_TOOLCHAIN_FILE<span style="color:#f92672">=</span>../ambpro2_sdk/project/realtek_amebapro2_v0_example/GCC-RELEASE/toolchain.cmake -Sambpro2_sdk/project/realtek_amebapro2_v0_example/GCC-RELEASE -Bbuild
+</span></span><span style="display:flex;"><span>cmake --build build --target flash_nn
+</span></span></code></pre></div><hr>
+<h2 id="chạy-mẫu-trong-ameba-pro2">Chạy mẫu trong Ameba Pro2</h2>
+<h3 id="tải-xuống-và-flash-hình-ảnh-nhị-phân">Tải xuống và flash hình ảnh nhị phân:</h3>
+<ol>
+<li>Tải xuống hình ảnh nhị phân <code>flash_ntz.nn.bin</code> về máy cục bộ từ phiên bản Amazon EC2. Ví dụ, chạy lệnh sau trên máy cục bộ (hãy đảm bảo cập nhật lệnh để bao gồm địa chỉ IP của bạn và đường dẫn thư mục chính xác):</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -i kvs-keypair.pem ubuntu@54.64.xxx.xxx:/home/ubuntu/sample-kvs-edge_ai-video-streaming-solution/KVS_Ameba_Plumerai/build/flash_ntz.nn.bin ./flash_ntz.nn.bin
+</span></span></code></pre></div><ol start="2">
+<li>Kết nối Ameba Pro2 MCU với máy cục bộ qua USB và nhấn các nút ở cả hai bên để vào chế độ tải xuống. Sử dụng công cụ hình ảnh Ameba Pro2 từ Realtek để flash hình ảnh nhị phân và khởi động lại nó.</li>
+</ol>
+<p>Ví dụ, sử dụng lệnh sau trên Microsoft Windows (vui lòng cập nhật đường dẫn của riêng bạn đến công cụ và số cổng COM):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\A</span>dministrator<span style="color:#ae81ff">\D</span>esktop<span style="color:#ae81ff">\P</span>ro2_PG_tool_v1.3.0&gt;.<span style="color:#ae81ff">\u</span>artfwburn.exe -p COM3 -f flash_ntz.nn.bin -b <span style="color:#ae81ff">2000000</span> -U
+</span></span></code></pre></div><p>Hoặc sử dụng lệnh sau trên macOS:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./uartfwburn.arm.darwin -p /dev/cu.usbserial-110 -f ./flash_ntz.nn.bin -b <span style="color:#ae81ff">3000000</span>
+</span></span></code></pre></div><p>Khi quá trình hoàn tất, bạn sẽ nhận được nhật ký đầu ra tương tự như sau:</p>
+<pre tabindex="0"><code>[INFO] Flash firmware successfully!
+</code></pre><hr>
+<h3 id="cấu-hình-wifi">Cấu hình WiFi:</h3>
+<ol>
+<li>
+<p>Nhấn nút reset, nằm cạnh chỉ báo LED đỏ.</p>
+</li>
+<li>
+<p>Sử dụng công cụ serial và cấu hình nó như sau:</p>
+<ul>
+<li>Tốc độ baud = 115200</li>
+<li>Bit dữ liệu = 8</li>
+<li>Parity = None</li>
+<li>Bit dừng = 1, XON_OFF</li>
+</ul>
+</li>
+<li>
+<p>Dán thông tin cấu hình WiFi (hãy đảm bảo thay đổi thông tin cụ thể cho mạng của bạn):</p>
+</li>
+</ol>
+<pre tabindex="0"><code>ATW0=myHotspotName
+ATW1=myPassword
+ATWC
+</code></pre><p>Khi bạn hoàn tất, nhấn Enter.</p>
+<p>Khi quá trình hoàn tất, bạn sẽ nhận được nhật ký đầu ra tương tự như sau:</p>
+<pre tabindex="0"><code>[INFO] WiFi connected successfully!
+</code></pre><hr>
+<h2 id="xác-minh-video-trên-aws-management-console">Xác minh video trên AWS Management Console</h2>
+<p>Giữ Ameba Pro2 được kết nối với cổng USB và hướng camera để ghi lại các chuyển động của con người.</p>
+<p>Mở Kinesis Video Streams Console và chọn luồng video bạn đã tạo. Bạn sẽ thấy video với các hộp giới hạn (bounding boxes) hiển thị kết quả phát hiện.</p>
+<p>Các đoạn video với các hộp giới hạn cho con người và khuôn mặt của họ giờ đây đã được thu nhận thành công và lưu trữ bền vững bởi dịch vụ.</p>
+<hr>
+<h2 id="tóm-tắt-hiệu-suất">Tóm tắt hiệu suất</h2>
+<p>Theo kết quả kiểm tra trong phòng thí nghiệm, ứng dụng tại biên chỉ yêu cầu 1,5MB dung lượng ROM và được tối ưu hóa cho NPU của Ameba Pro2. Firmware đạt tốc độ xử lý khoảng 10 khung hình mỗi giây trong khi chỉ tiêu tốn 20% CPU. Điều này để lại dung lượng cho các ứng dụng bổ sung.</p>
+<hr>
+<h2 id="chi-phí-và-dọn-dẹp">Chi phí và dọn dẹp</h2>
+<p>Thông thường, bạn sẽ hoàn thành toàn bộ các bước biên dịch và kiểm tra trong 10 giờ. Tổng chi phí nên dưới 5 USD. Để biết chi tiết về giá cho Amazon EC2, xem <a href="https://aws.amazon.com/ec2/pricing/on-demand/">giá của phiên bản theo yêu cầu Amazon EC2</a>. Để biết chi tiết về giá cho Kinesis Video Streams, xem <a href="https://aws.amazon.com/kinesis/video-streams/pricing/">giá của Kinesis Video Streams</a>. Ứng dụng mẫu của chúng tôi bao gồm ba phần sau:</p>
+<ul>
+<li>Dữ liệu được thu nhận vào Kinesis Video Streams</li>
+<li>Dữ liệu được tiêu thụ từ Kinesis Video Streams bằng HLS</li>
+<li>Dữ liệu được lưu trữ trong Kinesis Video Streams</li>
+</ul>
+<p>Để tiết kiệm chi phí, vui lòng xóa các tài nguyên bạn đã tạo:</p>
+<ul>
+<li>Mở Amazon EC2 Console và chấm dứt phiên bản <code>KVS_AmebaPlumerAI_poc</code>.</li>
+<li>Mở Kinesis Video Streams Console và xóa luồng <code>kvs-plumerai-realtek-stream</code>.</li>
+</ul>
+<hr>
+<h2 id="kết-luận">Kết luận</h2>
+<p>Để biết thêm hướng dẫn về các ứng dụng video, xem:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/consuming-streams.html">Tiêu thụ dữ liệu truyền thông từ Kinesis Video Streams</a></li>
+<li><a href="https://github.com/aws-samples/amazon-kinesis-video-streams-examples">Các ví dụ về Amazon Kinesis Video Streams</a></li>
+<li><a href="https://github.com/aws-samples/amazon-kinesis-video-streams-media-viewer">amazon-kinesis-video-streams-media-viewer</a> để thử nghiệm và kiểm tra nhanh.</li>
+<li>Xem video <a href="https://www.youtube.com/watch?v=example">Kết nối camera của bạn bằng Amazon Kinesis Video Streams cho WebRTC trong 10 phút</a> trên kênh YouTube AWS IoT.</li>
+</ul>
+<p>Sự hợp tác giữa Amazon Kinesis Video Streams, Realtek và Plumerai mang đến một giải pháp bảo mật gia đình tiên tiến, tận dụng AI thị giác tại biên và khả năng truyền tải video nâng cao. Hệ thống tích hợp này đáp ứng nhu cầu ngày càng tăng về các giải pháp video AI/ML phức tạp trong cả thị trường nhà thông minh và giám sát doanh nghiệp. Giải pháp hợp tác này cũng minh họa tiềm năng cho các cải tiến dựa trên AI trong bảo mật gia đình và doanh nghiệp bằng cách cung cấp khả năng giám sát nâng cao, xử lý hiệu quả và tích hợp đám mây liền mạch.</p>
+<p>Với khả năng phát hiện AI trực tiếp trên thiết bị, cách tiếp cận ưu tiên biên này có nghĩa là dữ liệu video của bạn vẫn ở cục bộ cho đến khi cần thiết, bảo vệ quyền riêng tư trong khi giảm đáng kể việc sử dụng băng thông. Khi nhu cầu về các giải pháp video thông minh tiếp tục tăng, công nghệ này thiết lập một tiêu chuẩn mới cho những gì có thể đạt được trong lĩnh vực giám sát thông minh và hệ thống giám sát video.</p>
+
 
 
 
@@ -2274,19 +2476,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1764903790"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1764903790"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1764903790"></script>
-    <script src="../../../js/jquery.sticky.js?1764903790"></script>
-    <script src="../../../js/featherlight.min.js?1764903790"></script>
-    <script src="../../../js/highlight.pack.js?1764903790"></script>
+    <script src="../../../js/clipboard.min.js?1764905602"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1764905602"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1764905602"></script>
+    <script src="../../../js/jquery.sticky.js?1764905602"></script>
+    <script src="../../../js/featherlight.min.js?1764905602"></script>
+    <script src="../../../js/highlight.pack.js?1764905602"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom-3.6.0.js?1764903790"></script>
-    <script src="../../../js/learn.js?1764903790"></script>
-    <script src="../../../js/hugo-learn.js?1764903790"></script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1764905602"></script>
+    <script src="../../../js/learn.js?1764905602"></script>
+    <script src="../../../js/hugo-learn.js?1764905602"></script>
 
-    <link href="../../../mermaid/mermaid.css?1764903790" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1764903790"></script>
+    <link href="../../../mermaid/mermaid.css?1764905602" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1764905602"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
