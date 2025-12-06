@@ -1,125 +1,183 @@
 ---
 title: "Event 1"
 date: 2025-11-13
-weight: 1
+weight: 2
 chapter: false
-pre: " <b> 4.1. </b> "
+pre: " <b> 4.2. </b> "
 ---
 
 {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Bài thu hoạch "AWS Perimeter Protection Workshop"
 
 ### Mục Đích Của Sự Kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- Cung cấp kỹ năng thực tế để bảo vệ chống lại các mối đe dọa bảo mật đang phát triển.
+- Giới thiệu các framework bảo mật AWS đã được chứng minh để luôn đi trước các mối đe dọa mới.
+- Học cách thiết kế và tối ưu hóa phân phối nội dung toàn cầu với Amazon CloudFront.
+- Thực hành bảo vệ ứng dụng web khỏi các tấn công phổ biến bằng AWS WAF.
+- Tham gia hands-on workshop để trải nghiệm thực tế các giải pháp bảo mật.
+
+**Thời gian:** 19/11/2025  
+**Địa điểm:** Thành phố Hồ Chí Minh
+
+---
 
 ### Danh Sách Diễn Giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- **Nguyễn Gia Hưng** - Head of Solutions Architect - Vietnam & Cambodia
+
+  - Hưng là Head of Solutions Architect cho Vietnam & Cambodia với hơn 17 năm kinh nghiệm thiết kế và triển khai kiến trúc cloud an toàn, có khả năng phục hồi cao.
+
+- **Julian Ju** - Senior Edge Services Specialist Solutions Architect
+
+  - Julian là AWS Edge services SA tại ASEAN với hơn 25 năm kinh nghiệm IT, giúp khách hàng áp dụng AWS Edge services để có trải nghiệm an toàn và nhanh hơn.
+
+- **Kevin Lim** - Senior Edge Services Specialist GTM
+  - Kevin là Edge Specialist tại APJ với 15 năm kinh nghiệm trong IT như SRE, security ops, và infrastructure engineer, giúp khách hàng xây dựng kiến trúc an toàn.
+
+---
+
+### Lịch Trình Sự Kiện
+
+| Thời gian     | Hoạt động                                              | Diễn giả                              |
+| ------------- | ------------------------------------------------------ | ------------------------------------- |
+| 09:00 - 09:45 | Đăng ký và Networking                                  | -                                     |
+| 09:45 - 10:00 | Khai mạc & Chào mừng                                   | -                                     |
+| 10:00 - 11:00 | Từ Edge đến Origin: CloudFront làm Nền tảng            | Nguyễn Gia Hưng                       |
+| 11:00 - 12:00 | Bảo vệ Attack Surface: WAF & Application Protection    | Julian Ju                             |
+| 12:00 - 13:00 | Ăn trưa & Networking                                   | -                                     |
+| 13:00 - 15:00 | Hands-On Workshop: Tối ưu hóa Internet Web Application | Nguyễn Gia Hưng, Julian Ju, Kevin Lim |
+| 15:00 - 15:15 | Nghỉ giải lao                                          | -                                     |
+| 15:15 - 17:15 | Hands-On Workshop: Bảo mật Internet Web Application    | Nguyễn Gia Hưng, Julian Ju, Kevin Lim |
+
+---
 
 ### Nội Dung Nổi Bật
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### Bối cảnh và Thách thức Bảo mật
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+- **Mối đe dọa mạng đang leo thang nhanh chóng**: Các cuộc tấn công DDoS tăng theo từng năm và các cuộc tấn công ở lớp ứng dụng nhắm vào các chức năng kinh doanh quan trọng.
+- **Chi phí vi phạm bảo mật**: Các tổ chức không có bảo vệ perimeter mạnh mẽ phải đối mặt với chi phí vi phạm trung bình $4.88M và khả năng gián đoạn kinh doanh.
+- **Tầm quan trọng của Perimeter Protection**: Cần có các framework bảo mật AWS đã được chứng minh để luôn đi trước các mối đe dọa mới.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### Từ Edge đến Origin: CloudFront làm Nền tảng
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+**Amazon CloudFront - CDN toàn cầu**:
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+- **Edge Locations**: Hiểu cách CloudFront sử dụng mạng lưới edge locations toàn cầu để phân phối nội dung gần người dùng hơn.
+- **Core CDN Capabilities**: Học các khả năng cốt lõi của CDN từ edge locations đến security controls.
+- **Security Controls**: Tích hợp các biện pháp bảo mật vào CloudFront distribution.
+- **Architecture & Optimization**: Cách thiết kế và tối ưu hóa phân phối nội dung toàn cầu.
+- **Scalability**: Xây dựng nền tảng vững chắc để phục vụ nội dung ở quy mô lớn.
 
-#### Domain-Driven Design (DDD)
+**Đối tượng**: Cloud architects và developers.
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+#### Bảo vệ Attack Surface: WAF & Application Protection
 
-#### Event-Driven Architecture
+**AWS WAF - Web Application Firewall**:
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+- **Block Malicious Traffic**: Sử dụng AWS WAF để chặn lưu lượng độc hại trước khi đến ứng dụng.
+- **Mitigate OWASP Top 10**: Bảo vệ chống lại các lỗ hổng OWASP Top 10 phổ biến như SQL injection, XSS, CSRF.
+- **Defend Against Bot Attacks**: Phát hiện và chặn các cuộc tấn công bot tự động.
+- **Custom Rules**: Tạo các quy tắc tùy chỉnh để bảo vệ ứng dụng cụ thể.
+- **Integration với CloudFront**: Tích hợp WAF với CloudFront để bảo vệ ở edge.
 
-#### Compute Evolution
+#### Hands-On Workshop: Tối ưu hóa Internet Web Application
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+- **Thực hành với CloudFront**: Cấu hình CloudFront distribution cho ứng dụng web.
+- **Optimization Techniques**: Học các kỹ thuật tối ưu hóa hiệu suất và giảm độ trễ.
+- **Caching Strategies**: Thiết lập caching strategies hiệu quả.
+- **Real-world Scenarios**: Thảo luận các tình huống thực tế và cách triển khai.
+- **Best Practices**: Áp dụng best practices từ các chuyên gia AWS.
 
-#### Amazon Q Developer
+#### Hands-On Workshop: Bảo vệ Internet Web Application
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+- **Thực hành với AWS WAF**: Cấu hình AWS WAF rules để bảo vệ ứng dụng.
+- **Security Configuration**: Thiết lập các biện pháp bảo mật cho web application.
+- **Attack Simulation**: Trải nghiệm cách WAF chặn các cuộc tấn công thực tế.
+- **Monitoring & Logging**: Thiết lập monitoring và logging cho security events.
+- **Integration Patterns**: Học cách tích hợp WAF với các dịch vụ AWS khác.
+
+---
 
 ### Những Gì Học Được
 
-#### Tư Duy Thiết Kế
+#### Kiến trúc Bảo mật Edge
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+- **CloudFront Architecture**: Hiểu cách thiết kế kiến trúc CloudFront để tối ưu hiệu suất và bảo mật.
+- **Edge Security**: Tầm quan trọng của bảo mật ở edge để giảm tải cho origin servers.
+- **CDN Best Practices**: Các best practices về caching, compression, và content delivery.
+- **Geographic Distribution**: Tận dụng edge locations để giảm độ trễ và cải thiện trải nghiệm người dùng.
 
-#### Kiến Trúc Kỹ Thuật
+#### Bảo vệ Ứng dụng Web
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+- **WAF Fundamentals**: Nắm vững các khái niệm cơ bản về Web Application Firewall.
+- **OWASP Top 10 Protection**: Hiểu cách bảo vệ chống lại các lỗ hổng OWASP Top 10.
+- **Bot Management**: Kỹ thuật phát hiện và quản lý bot traffic.
+- **Custom Rules Development**: Cách tạo và quản lý custom WAF rules.
+- **Security Monitoring**: Thiết lập monitoring và alerting cho security events.
 
-#### Chiến Lược Hiện Đại Hóa
+#### Tối ưu hóa Hiệu suất và Bảo mật
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+- **Performance Optimization**: Các kỹ thuật tối ưu hóa hiệu suất với CloudFront.
+- **Security vs Performance Trade-offs**: Hiểu sự đánh đổi giữa bảo mật và hiệu suất.
+- **Cost Optimization**: Cách tối ưu hóa chi phí khi sử dụng CloudFront và WAF.
+- **Scalability Patterns**: Thiết kế hệ thống có khả năng mở rộng với edge services.
+
+---
 
 ### Ứng Dụng Vào Công Việc
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+- **Triển khai CloudFront** cho dự án Mini-Market để cải thiện hiệu suất và giảm tải cho origin servers.
+- **Cấu hình AWS WAF** để bảo vệ ứng dụng web khỏi các cuộc tấn công phổ biến.
+- **Áp dụng Edge Security** vào kiến trúc hệ thống để tăng cường bảo mật.
+- **Tối ưu hóa CDN** với caching strategies và compression để giảm chi phí và cải thiện trải nghiệm người dùng.
+- **Thiết lập Security Monitoring** với CloudWatch và CloudTrail để theo dõi các sự kiện bảo mật.
+
+---
 
 ### Trải nghiệm trong event
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+Tham gia **"AWS Perimeter Protection Workshop"** tại Thành phố Hồ Chí Minh là một trải nghiệm rất giá trị, giúp tôi hiểu sâu hơn về cách bảo vệ hệ thống khỏi các mối đe dọa bảo mật hiện đại. Một số trải nghiệm nổi bật:
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+#### Học hỏi từ các chuyên gia hàng đầu
+
+- **Nguyễn Gia Hưng** đã chia sẻ kiến thức sâu về CloudFront architecture và cách tối ưu hóa phân phối nội dung toàn cầu.
+- **Julian Ju** trình bày chi tiết về AWS WAF và các kỹ thuật bảo vệ ứng dụng web khỏi các cuộc tấn công.
+- **Kevin Lim** chia sẻ kinh nghiệm thực tế về security operations và infrastructure engineering.
 
 #### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+- **Hands-on với CloudFront**: Trực tiếp cấu hình CloudFront distribution và trải nghiệm cách CDN hoạt động.
+- **Thực hành AWS WAF**: Cấu hình WAF rules và xem cách chúng chặn các cuộc tấn công thực tế.
+- **Tối ưu hóa Performance**: Học các kỹ thuật caching, compression, và content optimization.
+- **Security Configuration**: Thiết lập các biện pháp bảo mật và monitoring cho web applications.
+
+#### Hiểu rõ về Edge Security
+
+- Tầm quan trọng của **bảo mật ở edge** để giảm tải cho origin servers và cải thiện hiệu suất.
+- Cách **CloudFront và WAF** làm việc cùng nhau để tạo lớp bảo vệ mạnh mẽ.
+- **Best practices** về edge security và cách áp dụng vào các dự án thực tế.
 
 #### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+
+- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia AWS và các bạn tham gia khác.
+- Thảo luận về **real-world scenarios** và cách giải quyết các thách thức bảo mật.
+- Học hỏi từ kinh nghiệm của các tổ chức khác trong việc triển khai perimeter protection.
 
 #### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+
+- **Perimeter Protection** là lớp phòng thủ đầu tiên và quan trọng nhất trong kiến trúc bảo mật.
+- **CloudFront** không chỉ cải thiện hiệu suất mà còn cung cấp các tính năng bảo mật mạnh mẽ.
+- **AWS WAF** là công cụ hiệu quả để bảo vệ ứng dụng web khỏi các cuộc tấn công phổ biến.
+- **Edge Security** giúp giảm tải cho origin servers và cải thiện khả năng phục hồi của hệ thống.
+- Việc kết hợp **CloudFront và WAF** tạo ra giải pháp bảo mật toàn diện và hiệu quả.
 
 #### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+
+- Thêm các hình ảnh của các bạn tại đây
+
+> Tổng thể, sự kiện không chỉ cung cấp kiến thức về bảo mật edge mà còn giúp tôi hiểu cách áp dụng các giải pháp AWS để bảo vệ hệ thống khỏi các mối đe dọa hiện đại. Workshop đã trang bị cho tôi các kỹ năng thực tế để thiết kế và triển khai perimeter protection hiệu quả.
