@@ -22,26 +22,16 @@ pre: " <b> 4. </b> "
 > - Outcomes or value gained (lessons learned, new skills, contribution to the team/project)
 > - This listing helps demonstrate your actual participation as well as the soft skills and experience you have gained from each event.
 
-During my internship, I participated in two events. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with gifts and wonderful moments.
+During my internship, I participated in one event. It was a memorable experience that provided new, interesting, and useful knowledge, along with valuable insights into AWS security and edge services.
 
 ### [Event 1](4.1-Event1/)
 
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop
+&emsp;**Event Name:** AWS Perimeter Protection Workshop
 
-&emsp;**Date & Time:** 09:00, August 13, 2025
+&emsp;**Date & Time:** 09:00 - 17:15, November 19, 2025
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
-
-&emsp;**Role:** Attendee
-
----
-
-### [Event 2](4.2-Event2/)
-
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop
-
-&emsp;**Date & Time:** 09:00, August 13, 2025
-
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
+&emsp;**Location:** Ho Chi Minh City
 
 &emsp;**Role:** Attendee
+
+&emsp;**Brief Description:** This workshop focused on defending against evolving cyber threats using AWS security frameworks. The event covered Amazon CloudFront as a foundation for global content delivery, AWS WAF for application protection against OWASP Top 10 vulnerabilities and bot attacks, and included hands-on workshops to optimize and secure internet web applications. The workshop provided practical skills to stay ahead of emerging security threats and helped participants understand how to implement perimeter protection effectively.
