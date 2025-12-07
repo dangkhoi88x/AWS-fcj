@@ -12,7 +12,7 @@ pre: " <b> 1. </b> "
 
 **On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
 
-I completed the AWS Cloud Journey program over **12 weeks** (from September 29, 2025 to December 21, 2025), going through a learning process from basics to advanced AWS services and implementing a real-world project. Below is an overview of the completed weeks:
+I completed the AWS Cloud Journey program over **10 weeks** (from September 29, 2025 to December 7, 2025), going through a learning process from basics to advanced AWS services and implementing a real-world project. Below is an overview of the completed weeks:
 
 **Week 1 (Sep 29 - Oct 5):** [Getting familiar with AWS and basic AWS services](1.1-week1/)
 - Getting familiar with AWS cloud computing platform, core service groups (Compute, Storage, Networking, Database)
@@ -66,20 +66,11 @@ I completed the AWS Cloud Journey program over **12 weeks** (from September 29, 
 - Reviewing and consolidating all knowledge from Week 1 → Week 8
 - Preparing reports, documentation, and final presentation content
 
-**Week 10 (Dec 1 - Dec 7):** [Real-world deployment of Mini-Market system on AWS](1.10-week10/)
+**Week 10 (Dec 1 - Dec 7):** [Real-world deployment of Mini-Market system on AWS and program completion](1.10-week10/)
 - Real-world deployment of the Mini-Market system on AWS environment
 - Completing code and integrating designed AWS services
 - Performing testing and optimizing system performance
 - Preparing demo and video presentation of the system's main features
-
-**Week 11 (Dec 8 - Dec 14):** [Final review and presentation preparation](1.11-week11/)
 - Final review of all documents, reports, and proposal
 - Completing presentation slides and presentation content
-- Practicing presentation and preparing answers for Q&A
-- Ensuring quality of all deliverables before submission
-
-**Week 12 (Dec 15 - Dec 21):** [Final Presentation and program summary](1.12-week12/)
-- Conducting Final Presentation on the entire AWS Cloud Journey and Mini-Market project
-- Presenting and demonstrating the deployed system on AWS
 - Summarizing the entire program and evaluating achieved results
-- Receiving feedback from mentors and AWS community

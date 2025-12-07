@@ -12,7 +12,7 @@ pre: " <b> 1. </b> "
 
 **Trong trang này** bạn sẽ cần giới thiệu worklog của bạn **như thế nào**? Bạn hoàn thành chương trình trong vòng **bao nhiêu tuần**? Bạn **đã làm gì** trong các tuần đó?
 
-Tôi đã hoàn thành chương trình AWS Cloud Journey trong vòng **12 tuần** (từ 29/09/2025 đến 21/12/2025), trải qua quá trình học tập từ cơ bản đến nâng cao về các dịch vụ AWS và triển khai dự án thực tế. Dưới đây là tổng quan về các tuần đã hoàn thành:
+Tôi đã hoàn thành chương trình AWS Cloud Journey trong vòng **10 tuần** (từ 29/09/2025 đến 07/12/2025), trải qua quá trình học tập từ cơ bản đến nâng cao về các dịch vụ AWS và triển khai dự án thực tế. Dưới đây là tổng quan về các tuần đã hoàn thành:
 
 **Tuần 1 (29/09 - 05/10):** [Làm quen với AWS và các dịch vụ cơ bản](1.1-week1/)
 
@@ -75,23 +75,12 @@ Tôi đã hoàn thành chương trình AWS Cloud Journey trong vòng **12 tuần
 - Ôn tập và củng cố toàn bộ kiến thức từ Week 1 → Week 8
 - Chuẩn bị báo cáo, tài liệu và nội dung thuyết trình cuối kỳ
 
-**Tuần 10 (01/12 - 07/12):** [Triển khai thực tế hệ thống Mini-Market trên AWS](1.10-week10/)
+**Tuần 10 (01/12 - 07/12):** [Triển khai thực tế hệ thống Mini-Market trên AWS và kết thúc chương trình](1.10-week10/)
 
 - Triển khai thực tế hệ thống Mini-Market trên môi trường AWS
 - Hoàn thiện code và tích hợp các dịch vụ AWS đã thiết kế
 - Thực hiện testing và tối ưu hóa hiệu suất hệ thống
 - Chuẩn bị demo và video trình bày các tính năng chính của hệ thống
-
-**Tuần 11 (08/12 - 14/12):** [Rà soát cuối cùng và chuẩn bị thuyết trình](1.11-week11/)
-
 - Rà soát cuối cùng toàn bộ tài liệu, báo cáo và proposal
 - Hoàn thiện presentation slides và nội dung thuyết trình
-- Luyện tập thuyết trình và chuẩn bị câu trả lời cho Q&A
-- Đảm bảo chất lượng tất cả deliverables trước khi submit
-
-**Tuần 12 (15/12 - 21/12):** [Final Presentation và tổng kết chương trình](1.12-week12/)
-
-- Thực hiện Final Presentation về toàn bộ hành trình AWS Cloud Journey và dự án Mini-Market
-- Trình bày và demo hệ thống đã triển khai trên AWS
 - Tổng kết toàn bộ chương trình và đánh giá kết quả đạt được
-- Nhận feedback từ mentors và cộng đồng AWS

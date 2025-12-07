@@ -11,6 +11,9 @@ pre: " <b> 1.10. </b> "
 - **Complete code and integrate** all designed AWS services.
 - **Perform testing and optimization** of system performance.
 - **Prepare demo** and video presentation of main system features.
+- **Final review** of all documents, reports, and proposal.
+- **Complete presentation slides** and prepare final presentation content.
+- **Summarize the entire program** and evaluate achieved results.
 
 **Time Period:** December 1, 2025 - December 7, 2025
 
@@ -18,15 +21,15 @@ pre: " <b> 1.10. </b> "
 
 ### Weekly Tasks Overview
 
-| Day | Activity                                                                                                                                                                                                                                                                              | Start Date | End Date   | Reference                                  |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ------------------------------------------ |
-| 1   | - **Deploy Infrastructure on AWS** <br> + Create VPC with public and private subnets <br> + Configure Security Groups and Network ACLs <br> + Set up NAT Gateway and Internet Gateway <br> + Create RDS SQL Server instance in private subnet                                         | 12/01/2025 | 12/01/2025 | <https://aws.amazon.com/vpc/>              |
-| 2   | - **Deploy Application Layer** <br> + Create Elastic Beanstalk environment for .NET application <br> + Configure Auto Scaling and Load Balancer <br> + Connect application to RDS database <br> + Set up environment variables and connection strings                                 | 12/02/2025 | 12/02/2025 | <https://aws.amazon.com/elasticbeanstalk/> |
-| 3   | - **Integrate Storage and CDN** <br> + Create S3 bucket for product image storage <br> + Configure CloudFront distribution for content delivery <br> + Set up ElastiCache Redis cluster for caching <br> + Connect application to S3 and Redis                                        | 12/03/2025 | 12/03/2025 | <https://aws.amazon.com/s3/>               |
-| 4   | - **Configure Security and Monitoring** <br> + Set up IAM Roles and Policies for services <br> + Configure AWS WAF to protect application <br> + Set up CloudWatch alarms and dashboards <br> + Enable CloudTrail for activity logging                                                | 12/04/2025 | 12/04/2025 | <https://aws.amazon.com/iam/>              |
-| 5   | - **Testing and Optimization** <br> + Perform load testing to check performance <br> + Test High Availability <br> + Optimize database queries and caching strategy <br> + Adjust Auto Scaling policies based on metrics                                                              | 12/05/2025 | 12/05/2025 | <https://aws.amazon.com/cloudwatch/>       |
-| 6   | - **Prepare Demo and Documentation** <br> + Record video demo of main features: Login, View Products, Add to Cart, Checkout <br> + Create user guide and technical documentation <br> + Prepare demo script for presentation <br> + Create screenshots and diagrams for documentation | 12/06/2025 | 12/06/2025 | -                                          |
-| 7   | - **Week 10 Summary** <br> + Evaluate deployment and testing results <br> + Document issues encountered and solutions <br> + Update Proposal with actual results <br> + Prepare for Week 11: Final review and presentation                                                            | 12/07/2025 | 12/07/2025 | -                                          |
+| Day | Activity                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Start Date | End Date   | Reference                               |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | --------------------------------------- |
+| 1   | - **Deploy Infrastructure on AWS** <br> + Create VPC with public and private subnets <br> + Configure Security Groups and Network ACLs <br> + Set up NAT Gateway and Internet Gateway <br> + Create RDS SQL Server instance in private subnet                                                                                                                                                                                                                              | 12/01/2025 | 12/01/2025 | <https://d31ngjmtarxmwj.cloudfront.net> |
+| 2   | - **Deploy Application Layer** <br> + Create Elastic Beanstalk environment for .NET application <br> + Configure Auto Scaling and Load Balancer <br> + Connect application to RDS database <br> + Set up environment variables and connection strings                                                                                                                                                                                                                      | 12/02/2025 | 12/02/2025 | <https://d31ngjmtarxmwj.cloudfront.net> |
+| 3   | - **Integrate Storage and CDN** <br> + Create S3 bucket for product image storage <br> + Configure CloudFront distribution for content delivery <br> + Set up ElastiCache Redis cluster for caching <br> + Connect application to S3 and Redis                                                                                                                                                                                                                             | 12/03/2025 | 12/03/2025 | <https://d31ngjmtarxmwj.cloudfront.net> |
+| 4   | - **Configure Security and Monitoring** <br> + Set up IAM Roles and Policies for services <br> + Configure AWS WAF to protect application <br> + Set up CloudWatch alarms and dashboards <br> + Enable CloudTrail for activity logging                                                                                                                                                                                                                                     | 12/04/2025 | 12/04/2025 | <https://d31ngjmtarxmwj.cloudfront.net> |
+| 5   | - **Testing and Optimization** <br> + Perform load testing to check performance <br> + Test High Availability <br> + Optimize database queries and caching strategy <br> + Adjust Auto Scaling policies based on metrics                                                                                                                                                                                                                                                   | 12/05/2025 | 12/05/2025 | <https://d31ngjmtarxmwj.cloudfront.net> |
+| 6   | - **Prepare Demo and Documentation** <br> + Record video demo of main features: Login, View Products, Add to Cart, Checkout <br> + Create user guide and technical documentation <br> + Prepare demo script for presentation <br> + Create screenshots and diagrams for documentation                                                                                                                                                                                      | 12/06/2025 | 12/06/2025 | -                                       |
+| 7   | - **Final Review and Program Completion** <br> + Final review of all documents, reports, and proposal <br> + Complete presentation slides and presentation content <br> + Evaluate deployment and testing results <br> + Document issues encountered and solutions <br> + Update Proposal with actual results <br> + Summarize the entire AWS Cloud Journey program <br> + Evaluate achieved results and skills developed <br> + Prepare final deliverables for submission | 12/07/2025 | 12/07/2025 | -                                       |
 
 ---
 
@@ -67,8 +70,12 @@ pre: " <b> 1.10. </b> "
   - Learned best practices for security, monitoring, and cost optimization.
   - Developed skills working with multiple AWS services simultaneously.
 
-- **Ready for final phase**:
+- **Completed the AWS Cloud Journey program**:
 
   - System has been successfully deployed and tested.
   - Documentation and demo materials are fully prepared.
-  - Ready for Week 11: Final review and Week 12: Final presentation.
+  - Final review of all deliverables completed.
+  - Presentation slides and content finalized.
+  - Program summary and evaluation completed.
+  - All deliverables ready for submission.
+  - Successfully completed 10 weeks of AWS Cloud Journey learning and project implementation.
